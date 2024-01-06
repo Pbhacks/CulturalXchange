@@ -31,7 +31,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div  className="blur-box">
       <GlobalStyle darkMode={darkMode} />
       <Header>
         <DarkModeToggle onClick={toggleDarkMode}>
@@ -41,6 +41,7 @@ const Home = () => {
       <h2>Home Page</h2>
       <p>This is the content of your home page.</p>
     </div>
+    
   );
 };
 

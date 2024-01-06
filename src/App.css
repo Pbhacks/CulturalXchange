@@ -7,21 +7,43 @@ body {
   min-height: 100vh;
   align-items: center; /* Center horizontally */
 }
+body {
+  background-image: url('./1.jpg'); /* Replace '1.jpeg' with the actual filename of your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensure full viewport height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.blur-box {
+  background-color: #e83e8c; /* Cherry color */
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  justify-content: center;
+}
 
 body.light-mode {
-  background: rebeccapurple; /* Red linear gradient */
+  background: rgb(27, 2, 53); /* Red linear gradient */
   color: #8e44ad;
 }
 
 body.dark-mode {
-  background: #2c3e50; /* Dark mode background color */
+  background: rgb(18, 221, 157); /* Dark mode background color */
   color: #ecf0f1;
 }
 nav {
-  background: #8e44ad; /* Purple background for the navigation bar */
+  background: crimson; /* Purple background for the navigation bar */
   padding: 10px;
   width: 100%;
-  box-sizing: border-box;
+  display: inline-block;
 }
 
 ul {
