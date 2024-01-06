@@ -25,7 +25,7 @@ body {
 .blur-box {
   background-color: #e83e8c; /* Cherry color */
   border-radius: 10px;
-  padding: 20px;
+  padding: 80px;
   backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
   justify-content: center;
 }
@@ -43,7 +43,9 @@ nav {
   background: crimson; /* Purple background for the navigation bar */
   padding: 10px;
   width: 100%;
+  border: 2px solid blue;
   display: inline-block;
+  border-radius: 10px;
 }
 
 ul {
