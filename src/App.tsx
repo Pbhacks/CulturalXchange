@@ -1,11 +1,9 @@
 // src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { store } from './redux/store';
-import Home from './Home';  // Update this line
-import Login from './Login';  // Update this line
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./Home"; // Update this line
+import Login from "./Login"; // Update this line
+import "./App.css";
 
 const Navigation = () => {
   return (

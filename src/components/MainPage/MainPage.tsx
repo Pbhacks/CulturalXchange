@@ -1,6 +1,8 @@
 // src/MainPage.js
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import { doc, onSnapshot } from "firebase/firestore";
+import { firestore } from "../../firebase";
 
 const MainPageContainer = styled.div`
   max-width: 800px;
@@ -13,6 +15,18 @@ const Section = styled.section`
 `;
 
 const MainPage = () => {
+  useEffect(() => {
+    const unsub = onSnapshot(
+      doc(firestore, "User", "WJp2GVGPuPuFaWsNR7FL"),
+      (doc) => {
+        console.log("Current data: ", doc.data());
+      }
+    );
+    return () => {
+      unsub();
+    };
+  }, []);
+
   return (
     <MainPageContainer>
       <h1>Main Page</h1>
