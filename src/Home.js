@@ -1,14 +1,13 @@
 // src/Home.js
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import styled, { createGlobalStyle } from 'styled-components';
-import Navbar from './Navbar';
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: ${(props) => (props.darkMode ? '#2c3e50' : '#ecf0f1')};
-    color: ${(props) => (props.darkMode ? '#ecf0f1' : '#2c3e50')};
+    background-color: ${(props) => (props.darkMode ? "#2c3e50" : "#ecf0f1")};
+    color: ${(props) => (props.darkMode ? "#ecf0f1" : "#2c3e50")};
   }
 `;
 
@@ -31,7 +30,7 @@ const Home = () => {
   };
 
   return (
-    <div  className="blur-box">
+    <div className="blur-box">
       <GlobalStyle darkMode={darkMode} />
       <Header>
         <DarkModeToggle onClick={toggleDarkMode}>
@@ -41,7 +40,6 @@ const Home = () => {
       <h2>Home Page</h2>
       <p>This is the content of your home page.</p>
     </div>
-    
   );
 };
 
