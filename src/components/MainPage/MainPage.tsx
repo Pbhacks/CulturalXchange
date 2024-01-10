@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { doc, onSnapshot } from "firebase/firestore";
 import { firestore } from "../../firebase";
+import { useSelector } from "react-redux";
+import { User } from "../../types/type";
 
 const MainPageContainer = styled.div`
   max-width: 800px;
@@ -15,13 +17,12 @@ const Section = styled.section`
 `;
 
 const MainPage = () => {
+  const user = useSelector((state: any) => state.auth.user as User);
+
   useEffect(() => {
-    const unsub = onSnapshot(
-      doc(firestore, "User", "WJp2GVGPuPuFaWsNR7FL"),
-      (doc) => {
-        console.log("Current data: ", doc.data());
-      }
-    );
+    const unsub = onSnapshot(doc(firestore, "User", user.uid), (doc) => {
+      console.log("Current data: ", doc.data());
+    });
     return () => {
       unsub();
     };
