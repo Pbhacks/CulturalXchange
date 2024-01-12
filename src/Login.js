@@ -15,7 +15,16 @@ import {
 } from "firebase/auth";
 import { auth, firestore } from "./firebase";
 import MainPage from "./components/MainPage/MainPage";
-import { addDoc, collection, getDocs, query, where } from "@firebase/firestore";
+import {
+  collection,
+  doc,
+  getDocs,
+  query,
+  setDoc,
+  where,
+} from "@firebase/firestore";
+import { useDispatch, useSelector } from "react-redux";
+import { setUser } from "./redux/authSlice";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -39,8 +48,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [darkMode, setDarkMode] = useState(false);
-  const [user, setUser] = useState(null);
-
+  const dispatch = useDispatch();
+  const setNewUser = (user) => dispatch(setUser(user));
+  const user = useSelector((state) => state.auth.user);
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -63,15 +73,19 @@ const Login = () => {
     );
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
-      await addDoc(collection(firestore, "User"), {
+      await setDoc(doc(firestore, "User", user.uid), {
         uid: user.uid,
         name: user.displayName,
         authProvider: "google",
         email: user.email,
         chatList: [],
       });
+      await setDoc(doc(firestore, "ChatList", user.uid), {
+        rooms: [],
+        user: doc(firestore, "User", user.uid),
+      });
       console.log("add user successfully");
-      setUser({
+      setNewUser({
         uid: user.uid,
         name: user.displayName,
         authProvider: "google",
@@ -79,7 +93,14 @@ const Login = () => {
         chatList: [],
       });
     } else {
-      setUser(docs.docs[0]);
+      const docSnap = docs.docs[0];
+
+      if (docs.docs[0].exists()) {
+        const currentUser = docSnap.data();
+        setNewUser(currentUser);
+      } else {
+        console.log("No such User!");
+      }
     }
   };
 
@@ -100,7 +121,7 @@ const Login = () => {
     try {
       await signInWithPopup(auth, provider);
       console.log("Twitter login successful");
-      setUser(auth.currentUser);
+      setNewUser(auth.currentUser);
     } catch (error) {
       console.error("Error signing in with Twitter:", error.message);
     }
