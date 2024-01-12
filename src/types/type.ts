@@ -1,32 +1,34 @@
+import { DocumentReference } from "@firebase/firestore";
+
 export interface User {
   uid: string;
   email: string;
   phoneNum: number;
   authProvider: "google" | "twitter" | "phone";
   name: string;
-  chatList: ChatList;
+  chatList: DocumentReference;
 }
 
 export interface Room {
-  users: User[];
+  users: DocumentReference[];
   createdAt: Date;
   updatedAt: Date;
 }
 
 export interface Message {
-  user: User;
-  room: Room;
+  user: DocumentReference;
+  room: DocumentReference;
   message: string;
   createdAt: Date;
   updatedAt: Date;
 }
 
 export interface ChatList {
-  user: User;
-  rooms: Room[];
+  user: DocumentReference;
+  rooms: DocumentReference[];
 }
 
 export interface Follows {
-  userFrom: User;
-  userTo: User;
+  userFrom: DocumentReference;
+  userTo: DocumentReference;
 }
