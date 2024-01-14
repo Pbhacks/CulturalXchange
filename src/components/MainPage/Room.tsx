@@ -35,10 +35,10 @@ const Room = () => {
     setRoom(roomSnapshot.data() as RoomType);
   };
 
-  const getMessageData = async () => {
-    const messageSnapshot = await getMessageSnapshot(roomId);
-    setMessages(messageSnapshot.docs as unknown as Message[]);
-  };
+  // const getMessageData = async () => {
+  //   const messageSnapshot = await getMessageSnapshot(roomId);
+  //   setMessages(messageSnapshot.docs as unknown as Message[]);
+  // };
 
   const fetchData = async () => {
     await getRoomData();
@@ -72,8 +72,8 @@ const Room = () => {
 
   return (
     <div>
-      {messages.map(({ message }) => (
-        <div>{message}</div>
+      {messages.map(({ message }, index) => (
+        <div key={index}>{message}</div>
       ))}
       <MessageInput roomRef={roomRef} />
     </div>

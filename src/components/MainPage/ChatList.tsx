@@ -22,7 +22,6 @@ const ChatList = () => {
       querySnapshot.forEach((doc) => {
         rooms.push({ ...doc.data(), roomId: doc.id });
       });
-      console.log(rooms);
       setChatList(rooms);
     });
 
@@ -45,7 +44,7 @@ const ChatList = () => {
       <>
         {chatList.map((room) => {
           return (
-            <div>
+            <div key={room.roomId}>
               {String(room.createdAt)}
               <Link to={`/chat/${user.uid}/${room.roomId}`}>Enter Room</Link>
             </div>

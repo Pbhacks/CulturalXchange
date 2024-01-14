@@ -1,12 +1,12 @@
 // src/MainPage.js
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { collection, doc, onSnapshot, query, where } from "firebase/firestore";
+import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { firestore } from "../../firebase";
 import { useSelector } from "react-redux";
 import { User } from "../../types/type";
-import { addRoomToChatList, createRoom } from "../../api/api";
 import ChatList from "./ChatList";
+import UserList from "./UserList";
 
 const MainPageContainer = styled.div`
   max-width: 800px;
@@ -42,34 +42,17 @@ const MainPage = () => {
       <h1>Main Page</h1>
       <Section>
         <h2>Contacts</h2>
-        <button
-          type="button"
-          onClick={async () => {
-            const roomRef = await createRoom([
-              doc(firestore, "User", user.uid),
-              doc(firestore, "User", "tqwovhIKgKNTWJLg3wEW1472L1C3"),
-            ]);
-            await addRoomToChatList(
-              [
-                doc(firestore, "User", user.uid),
-                doc(firestore, "User", "tqwovhIKgKNTWJLg3wEW1472L1C3"),
-              ],
-              roomRef
-            );
-          }}
-        >
-          Create!
-        </button>
         {/* Add contacts list or component here */}
       </Section>
 
       <Section>
-        <h2>ChatList</h2>
+        <h2>Your current ChatList</h2>
         <ChatList />
       </Section>
 
       <Section>
         <h2>Messages</h2>
+        <UserList />
         {/* Add messages list or component here */}
       </Section>
       <Section>
