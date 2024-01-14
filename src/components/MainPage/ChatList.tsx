@@ -38,9 +38,22 @@ const ChatList = () => {
     };
   }, []);
 
+  if (!chatList) {
+    return <div>Loading chatlist...</div>;
+  }
+
+  if (chatList.length === 0) {
+    return <div>Start Chatting with your friend!</div>;
+  }
+
   return (
     <div>
       chatlist
+      <>
+        {chatList.map((room) => {
+          return <div>{String(room.createdAt)}</div>;
+        })}
+      </>
       <Outlet />
     </div>
   );
