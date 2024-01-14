@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { User } from "../../types/type";
 import { Link } from "react-router-dom";
 import { addRoomToChatList, createRoom } from "../../api/api";
+import ChatList from "./ChatList";
 
 const MainPageContainer = styled.div`
   max-width: 800px;
@@ -62,6 +63,12 @@ const MainPage = () => {
         </button>
         {/* Add contacts list or component here */}
       </Section>
+
+      <Section>
+        <h2>ChatList</h2>
+        <ChatList />
+      </Section>
+
       <Section>
         <h2>Messages</h2>
         <Link to={`/chat/${user.uid}/7xjwa7dmCHCfAjnW9Kke`}>
