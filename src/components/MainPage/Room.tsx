@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  getChatListSnapshot,
-  getMessageSnapshot,
-  getRoomSnapshot,
-} from "../../api/api";
+import { getChatListSnapshot, getRoomSnapshot } from "../../api/api";
 import { useParams } from "react-router-dom";
-import { Message, Room as RoomType } from "../../types/type";
+import { Message, Room as RoomType, User } from "../../types/type";
 import {
   DocumentReference,
   collection,
@@ -16,6 +12,7 @@ import {
 } from "@firebase/firestore";
 import { firestore } from "../../firebase";
 import MessageInput from "./MessageInput";
+import { useSelector } from "react-redux";
 
 const Room = () => {
   const { chatListId, roomId } = useParams();
@@ -23,6 +20,8 @@ const Room = () => {
   const [messages, setMessages] = useState<Message[]>(null);
 
   const roomRef = doc(firestore, "Room", roomId);
+
+  const currentUser = useSelector((state: any) => state.auth.user as User);
 
   const getRoomData = async () => {
     const roomSnapshot = await getRoomSnapshot(roomId);
@@ -35,11 +34,6 @@ const Room = () => {
     setRoom(roomSnapshot.data() as RoomType);
   };
 
-  // const getMessageData = async () => {
-  //   const messageSnapshot = await getMessageSnapshot(roomId);
-  //   setMessages(messageSnapshot.docs as unknown as Message[]);
-  // };
-
   const fetchData = async () => {
     await getRoomData();
     // await getMessageData();
@@ -50,7 +44,6 @@ const Room = () => {
     const unsub = onSnapshot(q, (snapshot) => {
       let data = [];
       snapshot.forEach((doc) => {
-        console.log("Current data: ", doc.data());
         data = [...data, doc.data()];
       });
       setMessages(data);
@@ -72,8 +65,13 @@ const Room = () => {
 
   return (
     <div>
-      {messages.map(({ message }, index) => (
-        <div key={index}>{message}</div>
+      {messages.map(({ message, user }, index) => (
+        <div
+          key={index}
+          style={{ textAlign: user.id === currentUser.uid ? "left" : "start" }}
+        >
+          {message}
+        </div>
       ))}
       <MessageInput roomRef={roomRef} />
     </div>

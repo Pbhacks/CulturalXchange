@@ -37,8 +37,9 @@ const UserList = () => {
 
         return (
           <>
-            <div key={uid}>{name}</div>
-            <PrivateChatRoomBtn targetUserId={uid} />
+            <PrivateChatRoomBtn targetUserId={uid}>
+              <div key={uid}>Chat with | {name}</div>
+            </PrivateChatRoomBtn>
           </>
         );
       })}

@@ -6,7 +6,13 @@ import { firestore } from "../../firebase";
 import { Link } from "react-router-dom";
 import { addRoomToChatList, createRoom } from "../../api/api";
 
-const PrivateChatRoomBtn = ({ targetUserId }: { targetUserId: string }) => {
+const PrivateChatRoomBtn = ({
+  targetUserId,
+  children,
+}: {
+  targetUserId: string;
+  children: React.ReactNode;
+}) => {
   const [roomId, setRoomId] = useState<string>(null);
 
   const user = useSelector((state: any) => state.auth.user as User);
@@ -50,7 +56,7 @@ const PrivateChatRoomBtn = ({ targetUserId }: { targetUserId: string }) => {
 
   if (!roomId) return <></>;
 
-  return <Link to={`/chat/${user.uid}/${roomId}`}>Click!!!!!!</Link>;
+  return <Link to={`/chat/${user.uid}/${roomId}`}>{children}</Link>;
 };
 
 export default PrivateChatRoomBtn;

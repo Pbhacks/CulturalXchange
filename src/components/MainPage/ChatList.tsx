@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import { Room, User } from "../../types/type";
 import { collection, doc, onSnapshot, query, where } from "@firebase/firestore";
 import { firestore } from "../../firebase";
 import { useSelector } from "react-redux";
+import RoomMemberName from "./RoomMemberName";
 
 const ChatList = () => {
+  const { roomId } = useParams();
   const [chatList, setChatList] =
     useState<Array<Room & { roomId: string }>>(null);
 
@@ -40,18 +42,21 @@ const ChatList = () => {
 
   return (
     <div>
-      chatlist
-      <>
-        {chatList.map((room) => {
-          return (
-            <div key={room.roomId}>
-              {String(room.createdAt)}
-              <Link to={`/chat/${user.uid}/${room.roomId}`}>Enter Room</Link>
-            </div>
-          );
-        })}
-      </>
-      <Outlet />
+      {!roomId ? (
+        <>
+          {chatList.map((room) => {
+            return (
+              <div key={room.roomId}>
+                {String(room.createdAt)}
+                <RoomMemberName roomId={room.roomId} />
+                <Link to={`/chat/${user.uid}/${room.roomId}`}>Enter Room</Link>
+              </div>
+            );
+          })}
+        </>
+      ) : (
+        <Outlet />
+      )}
     </div>
   );
 };
