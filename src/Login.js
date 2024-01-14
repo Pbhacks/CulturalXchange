@@ -1,12 +1,10 @@
 // src/Login.js
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import {
   faGoogle as faGoogleBrand,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import styled, { createGlobalStyle } from "styled-components";
 import {
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -17,28 +15,9 @@ import { auth, firestore } from "./firebase";
 import MainPage from "./components/MainPage/MainPage";
 import { addDoc, collection, getDocs, query, where } from "@firebase/firestore";
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${(props) => (props.darkMode ? "#2c3e50" : "#ecf0f1")};
-    color: ${(props) => (props.darkMode ? "#ecf0f1" : "#2c3e50")};
-  }
-`;
-
-const Header = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-`;
-
-const DarkModeToggle = styled.div`
-  cursor: pointer;
-  padding: 10px;
-`;
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
   const [user, setUser] = useState(null);
 
   const handleLogin = async (e) => {
@@ -105,25 +84,14 @@ const Login = () => {
       console.error("Error signing in with Twitter:", error.message);
     }
   };
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
   return (
     <div>
-      <GlobalStyle darkMode={darkMode} />
-      <Header>
-        <DarkModeToggle onClick={toggleDarkMode}>
-          <FontAwesomeIcon icon={darkMode ? faSun : faMoon} size="2x" />
-        </DarkModeToggle>
-      </Header>
       {user ? (
         <MainPage />
       ) : (
         <div>
-          <div className="blur-box">
-            <h2>Login Page</h2>
+          <div className="element">
+            <h2>Login Page</h2><br></br>
             <FontAwesomeIcon
               icon={faGoogleBrand}
               onClick={handleGoogleLogin}
