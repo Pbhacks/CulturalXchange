@@ -5,7 +5,6 @@ import { collection, doc, onSnapshot, query, where } from "firebase/firestore";
 import { firestore } from "../../firebase";
 import { useSelector } from "react-redux";
 import { User } from "../../types/type";
-import { Link } from "react-router-dom";
 import { addRoomToChatList, createRoom } from "../../api/api";
 import ChatList from "./ChatList";
 
@@ -71,9 +70,6 @@ const MainPage = () => {
 
       <Section>
         <h2>Messages</h2>
-        <Link to={`/chat/${user.uid}/7xjwa7dmCHCfAjnW9Kke`}>
-          Go to test room
-        </Link>
         {/* Add messages list or component here */}
       </Section>
       <Section>
