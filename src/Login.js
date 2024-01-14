@@ -24,23 +24,6 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "./redux/authSlice";
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${(props) => (props.darkMode ? "#2c3e50" : "#ecf0f1")};
-    color: ${(props) => (props.darkMode ? "#ecf0f1" : "#2c3e50")};
-  }
-`;
-
-const Header = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-`;
-
-const DarkModeToggle = styled.div`
-  cursor: pointer;
-  padding: 10px;
-`;
 
 const Login = () => {
   const [email, setEmail] = useState("");
