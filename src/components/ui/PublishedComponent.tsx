@@ -25,7 +25,7 @@ export default function MyComponent() {
     if (!user) {
       redirect("/");
     }
-  }, []);
+  }, [user]);
 
   return (
     <Div>
