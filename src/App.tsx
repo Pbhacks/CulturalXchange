@@ -6,6 +6,7 @@ import Login from "./Login"; // Update this line
 import "./App.css";
 import Room from "./components/MainPage/Room";
 import ChatList from "./components/MainPage/ChatList";
+import MyComponent from "./components/ui/PublishedComponent";
 
 const Navigation = () => {
   return (
@@ -25,8 +26,10 @@ const Navigation = () => {
 const App = () => {
   return (
     <Router>
-      <Navigation />
+      {/* Can render it when you want to render in page */}
+      {/* <Navigation /> */}
       <Routes>
+        <Route path="/testing" element={<MyComponent />} />
         <Route
           path="/"
           element={

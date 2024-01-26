@@ -1,26 +1,27 @@
 /* src/App.css */
 body {
-  transition: background 0.5s ease, color 0.5s ease;
+  /* transition: background 0.5s ease, color 0.5s ease;
   margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  align-items: center; /* Center horizontally */
+  align-items: center; Center horizontally */
 }
 body {
-  background-image: url('./1.jpg'); /* Replace '1.jpeg' with the actual filename of your image */
-  background-size: cover;
+  /* background-image: url('./1.jpg'); Replace '1.jpeg' with the actual filename of your image */
+  /* background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh; /* Ensure full viewport height */
-  margin: 0;
+  /* margin: 0;
   padding: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative; */
+  margin: 0;
 }
 .blur-box {
   background-color: #e83e8c; /* Cherry color */
@@ -39,6 +40,7 @@ body.dark-mode {
   background: rgb(18, 221, 157); /* Dark mode background color */
   color: #ecf0f1;
 }
+
 nav {
   background: crimson; /* Purple background for the navigation bar */
   padding: 10px;
@@ -46,6 +48,10 @@ nav {
   border: 2px solid blue;
   display: inline-block;
   border-radius: 10px;
+}
+
+span, p {
+  color: white;
 }
 
 ul {
@@ -67,7 +73,7 @@ a {
 }
 
 /* Set body background color and text color based on the mode */
-body.light-mode {
+/* body.light-mode {
   background: var(--bg-color);
   color: var(--text-color);
 }
@@ -75,4 +81,4 @@ body.light-mode {
 body.dark-mode {
   background-color: var(--bg-color);
   color: var(--text-color);
-}
+} */
