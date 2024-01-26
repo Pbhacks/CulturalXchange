@@ -6,12 +6,10 @@ import MetaInfo from "./MetaInfo";
 import useGetChatList from "../../hooks/useGetChatList";
 import { useState, useEffect } from "react";
 import Chat from "./Chat";
-import MessageInput from "../MainPage/MessageInput";
-import { doc } from "@firebase/firestore";
-import { firestore } from "../../firebase";
 import { useSelector } from "react-redux";
 import { User } from "../../types/type";
 import { redirect } from "react-router-dom";
+import InputBar from "./InputBar";
 
 export default function MyComponent() {
   const { chatList } = useGetChatList();
@@ -94,21 +92,7 @@ export default function MyComponent() {
               </Div35>
             </Div34>
             <Div36>
-              <Div37>
-                <Img29
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8d6f11c2734634bcec9e726a76a144ca9eadcb2e27d6955ced95479771c36617?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
-                />
-                <Img30
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/db13e62c511458e6cf6da0215162047f186f1280b33eb6031ba7da7fd6f6b8d8?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
-                />
-                {currentRoomId && (
-                  <MessageInput
-                    roomRef={doc(firestore, "Room", currentRoomId)}
-                  />
-                )}
-              </Div37>
+              <InputBar currentRoomId={currentRoomId} />
               <Img31
                 loading="lazy"
                 srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b47e95f7da6f1259c02809174c7da900057b6b3efd5289eba885e6db43abec2b?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b47e95f7da6f1259c02809174c7da900057b6b3efd5289eba885e6db43abec2b?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b47e95f7da6f1259c02809174c7da900057b6b3efd5289eba885e6db43abec2b?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b47e95f7da6f1259c02809174c7da900057b6b3efd5289eba885e6db43abec2b?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b47e95f7da6f1259c02809174c7da900057b6b3efd5289eba885e6db43abec2b?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b47e95f7da6f1259c02809174c7da900057b6b3efd5289eba885e6db43abec2b?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b47e95f7da6f1259c02809174c7da900057b6b3efd5289eba885e6db43abec2b?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b47e95f7da6f1259c02809174c7da900057b6b3efd5289eba885e6db43abec2b?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
@@ -237,6 +221,7 @@ const Column4 = styled.div`
   margin-left: 20px;
   @media (max-width: 991px) {
     width: 100%;
+    margin: 0;
   }
 `;
 
@@ -330,27 +315,12 @@ const Div34 = styled.div`
   }
 `;
 
-const Img25 = styled.img`
-  aspect-ratio: 1.15;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  overflow: hidden;
-  z-index: 10;
-  flex-grow: 1;
-  flex-basis: 0%;
-  @media (max-width: 991px) {
-    max-width: 100%;
-  }
-`;
-
 const Div35 = styled.div`
   background-color: var(--translucent-color, rgba(80, 68, 56, 0.45));
   display: flex;
-  flex-basis: 0%;
   flex-direction: column;
   align-items: center;
-  padding: 50px 15px 50px 5px;
+  width: 73px;
   @media (max-width: 991px) {
     display: none;
   }
@@ -398,56 +368,6 @@ const Div36 = styled.div`
   gap: 0px;
   @media (max-width: 991px) {
     max-width: 100%;
-    flex-wrap: wrap;
-  }
-`;
-
-const Div37 = styled.div`
-  background-color: var(--base-colour-1, rgba(84, 107, 232, 0.45));
-  display: flex;
-  align-items: start;
-  gap: 15px;
-  padding: 17px 45px 10px 31px;
-  @media (max-width: 991px) {
-    max-width: 100%;
-    flex-wrap: wrap;
-    padding: 0 20px;
-  }
-`;
-
-const Img29 = styled.img`
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 30px;
-  overflow: hidden;
-  margin-top: 5px;
-  max-width: 100%;
-`;
-
-const Img30 = styled.img`
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 30px;
-  overflow: hidden;
-  margin-top: 5px;
-  max-width: 100%;
-`;
-
-const Div38 = styled.div`
-  justify-content: center;
-  color: var(--base-colour-2, #fff);
-  border-radius: 25px;
-  background-color: var(--translucent-color, rgba(80, 68, 56, 0.45));
-  align-self: stretch;
-  flex-grow: 1;
-  align-items: start;
-  padding: 14px 60px 6px 22px;
-  font: 200 20px Inter, sans-serif;
-  @media (max-width: 991px) {
-    max-width: 100%;
-    padding: 0 20px;
   }
 `;
 

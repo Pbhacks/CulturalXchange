@@ -11,6 +11,8 @@ const useGetChatList = () => {
   const user = useSelector((state: any) => state.auth.user as User);
 
   useEffect(() => {
+    if (!user) return;
+
     const q = query(
       collection(firestore, "Room"),
       where("users", "array-contains", doc(firestore, "User", user.uid))
@@ -27,7 +29,7 @@ const useGetChatList = () => {
     return () => {
       unsub();
     };
-  }, []);
+  }, [user]);
 
   return { chatList, setChatList };
 };

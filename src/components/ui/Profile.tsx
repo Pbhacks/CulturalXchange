@@ -2,9 +2,16 @@ import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { User } from "../../types/type";
+import { redirect } from "react-router-dom";
 
 const Profile = () => {
   const user = useSelector((state: any) => state.auth.user as User);
+
+  if (!user) {
+    redirect("/");
+
+    return <div>waiting...</div>;
+  }
 
   return (
     <ProfileWrapper>
