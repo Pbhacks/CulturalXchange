@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { User } from "../../types/type";
-import { DocumentReference, doc, getDoc } from "@firebase/firestore";
-import { firestore } from "../../firebase";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { firestore } from "../firebase";
+import { DocumentReference, doc, getDoc } from "@firebase/firestore";
+import { User } from "../types/type";
 
-const RoomMemberName = ({ roomId }: { roomId: string }) => {
+const useGetChatListName = ({ roomId }: { roomId: string }) => {
   const [userName, setUserName] = useState<string[]>([]);
 
   const user = useSelector((state: any) => state.auth.user as User);
@@ -30,13 +30,7 @@ const RoomMemberName = ({ roomId }: { roomId: string }) => {
     getUserName();
   }, []);
 
-  return (
-    <div>
-      {userName.map((indivName) => {
-        return <div key={indivName}>{indivName}</div>;
-      })}
-    </div>
-  );
+  return { chatListName: userName, setUserName };
 };
 
-export default RoomMemberName;
+export default useGetChatListName;

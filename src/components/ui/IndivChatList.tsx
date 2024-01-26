@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import useGetChatListName from "../../hooks/useGetChatListName";
 
 interface IndivChatListProps {
-  profileImageSrc: string;
-  username: string;
-  latestChat: string;
+  roomId: string;
 }
 
-const IndivChatList = ({
-  profileImageSrc,
-  username,
-  latestChat,
-}: IndivChatListProps) => {
+const IndivChatList = ({ roomId }: IndivChatListProps) => {
+  const { chatListName } = useGetChatListName({ roomId });
+
   return (
     <Div20>
-      <Img9 loading="lazy" srcSet={profileImageSrc} />
+      <Img9
+        loading="lazy"
+        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
+      />
       <Div21>
-        <Img10>{username}</Img10>
-        <Img11>{latestChat}</Img11>
+        <Img10>{chatListName[0]}</Img10>
+        {/* <Img11>{latestChat}</Img11> */}
       </Div21>
     </Div20>
   );
@@ -61,7 +61,6 @@ const Img10 = styled.p`
   aspect-ratio: 5;
   object-fit: contain;
   object-position: center;
-  width: 70px;
   overflow: hidden;
   align-self: start;
   max-width: 100%;

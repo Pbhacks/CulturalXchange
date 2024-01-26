@@ -5,8 +5,8 @@ const MetaInfo = () => {
   return (
     <MetaInfoWrapper>
       <Div10>
-        <Div11>DATE:</Div11>
-        <Div12>TIME:</Div12>
+        <Div11>DATE: 2024-01-01</Div11>
+        <Div12>TIME: 09 : 00 AM</Div12>
       </Div10>
       <Div13>
         <Div14>25℃</Div14>

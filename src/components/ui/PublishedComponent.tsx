@@ -3,8 +3,11 @@ import styled from "styled-components";
 import IndivChatList from "./IndivChatList";
 import Profile from "./Profile";
 import MetaInfo from "./MetaInfo";
+import useGetChatList from "../../hooks/useGetChatList";
 
 export default function MyComponent(props) {
+  const { chatList } = useGetChatList();
+
   return (
     <Div>
       <Div2>
@@ -15,27 +18,10 @@ export default function MyComponent(props) {
             </Div4>
             <MetaInfo />
             <ChatList>
-              <IndivChatList
-                profileImageSrc={
-                  "https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
-                }
-                username="TestUser"
-                latestChat="hello!"
-              />
-              <IndivChatList
-                profileImageSrc={
-                  "https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
-                }
-                username="TestUser"
-                latestChat="hello!"
-              />
-              <IndivChatList
-                profileImageSrc={
-                  "https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9c427d90e51b431a25580718e86ef04995df8f81c0890b5de34d318e0cb62eb?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
-                }
-                username="TestUser"
-                latestChat="hello!"
-              />
+              {chatList &&
+                chatList.map(({ roomId }) => {
+                  return <IndivChatList roomId={roomId} />;
+                })}
               <Div28>
                 <Img21
                   loading="lazy"

@@ -1,7 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { User } from "../../types/type";
 
 const Profile = () => {
+  const user = useSelector((state: any) => state.auth.user as User);
+
   return (
     <ProfileWrapper>
       <Column2>
@@ -12,8 +16,8 @@ const Profile = () => {
       </Column2>
       <Column3>
         <Div6>
-          <Div7>USERNAME</Div7>
-          <Div8>Description</Div8>
+          <Div7>{user.name}</Div7>
+          <Div8>{user.email}</Div8>
         </Div6>
       </Column3>
     </ProfileWrapper>
@@ -82,9 +86,11 @@ const Div6 = styled.div`
 
 const Div7 = styled.div`
   font: 700 21px Inter, sans-serif;
+  color: black;
 `;
 
 const Div8 = styled.div`
   margin-top: 14px;
   font: 100 16px Inter, sans-serif;
+  color: black;
 `;

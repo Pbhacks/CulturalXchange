@@ -18,6 +18,9 @@ const Navigation = () => {
         <li>
           <Link to="/login">Login</Link>
         </li>
+        <li>
+          <Link to="/testing">Chat</Link>
+        </li>
       </ul>
     </nav>
   );
@@ -27,7 +30,7 @@ const App = () => {
   return (
     <Router>
       {/* Can render it when you want to render in page */}
-      {/* <Navigation /> */}
+      <Navigation />
       <Routes>
         <Route path="/testing" element={<MyComponent />} />
         <Route
