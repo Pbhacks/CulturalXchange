@@ -4,9 +4,28 @@ import IndivChatList from "./IndivChatList";
 import Profile from "./Profile";
 import MetaInfo from "./MetaInfo";
 import useGetChatList from "../../hooks/useGetChatList";
+import { useState, useEffect } from "react";
+import Chat from "./Chat";
+import MessageInput from "../MainPage/MessageInput";
+import { doc } from "@firebase/firestore";
+import { firestore } from "../../firebase";
+import { useSelector } from "react-redux";
+import { User } from "../../types/type";
+import { redirect } from "react-router-dom";
 
-export default function MyComponent(props) {
+export default function MyComponent() {
   const { chatList } = useGetChatList();
+
+  const user = useSelector((state: any) => state.auth.user as User);
+
+  const [contactName, setContactName] = useState<string>("TestName");
+  const [currentRoomId, setRoomId] = useState<string>("");
+
+  useEffect(() => {
+    if (!user) {
+      redirect("/");
+    }
+  }, []);
 
   return (
     <Div>
@@ -20,7 +39,13 @@ export default function MyComponent(props) {
             <ChatList>
               {chatList &&
                 chatList.map(({ roomId }) => {
-                  return <IndivChatList roomId={roomId} />;
+                  return (
+                    <IndivChatList
+                      roomId={roomId}
+                      setRoomId={setRoomId}
+                      setConnectName={setContactName}
+                    />
+                  );
                 })}
               <Div28>
                 <Img21
@@ -40,7 +65,7 @@ export default function MyComponent(props) {
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/039a78b90d4e5caadaf09f1e40d6b3e4f33678b7deb0de4f740b42a2507aecab?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
                 />
-                <Div33>Contact Name</Div33>
+                <Div33>{contactName}</Div33>
                 <Img23
                   loading="lazy"
                   srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/0c0c6102d125a8c07f095e1a86817ebc35b5649f007e880970403d17b6443485?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/0c0c6102d125a8c07f095e1a86817ebc35b5649f007e880970403d17b6443485?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0c0c6102d125a8c07f095e1a86817ebc35b5649f007e880970403d17b6443485?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/0c0c6102d125a8c07f095e1a86817ebc35b5649f007e880970403d17b6443485?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/0c0c6102d125a8c07f095e1a86817ebc35b5649f007e880970403d17b6443485?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0c0c6102d125a8c07f095e1a86817ebc35b5649f007e880970403d17b6443485?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/0c0c6102d125a8c07f095e1a86817ebc35b5649f007e880970403d17b6443485?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/0c0c6102d125a8c07f095e1a86817ebc35b5649f007e880970403d17b6443485?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
@@ -52,10 +77,7 @@ export default function MyComponent(props) {
               />
             </Div31>
             <Div34>
-              <Img25
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/197caee91f9b5acb2c131c72127dff801b2112653c1c9ed46457724ed72e49b7?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/197caee91f9b5acb2c131c72127dff801b2112653c1c9ed46457724ed72e49b7?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/197caee91f9b5acb2c131c72127dff801b2112653c1c9ed46457724ed72e49b7?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/197caee91f9b5acb2c131c72127dff801b2112653c1c9ed46457724ed72e49b7?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/197caee91f9b5acb2c131c72127dff801b2112653c1c9ed46457724ed72e49b7?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/197caee91f9b5acb2c131c72127dff801b2112653c1c9ed46457724ed72e49b7?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/197caee91f9b5acb2c131c72127dff801b2112653c1c9ed46457724ed72e49b7?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/197caee91f9b5acb2c131c72127dff801b2112653c1c9ed46457724ed72e49b7?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
-              />
+              {currentRoomId && <Chat roomId={currentRoomId} />}
               <Div35>
                 <Img26
                   loading="lazy"
@@ -81,7 +103,11 @@ export default function MyComponent(props) {
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/db13e62c511458e6cf6da0215162047f186f1280b33eb6031ba7da7fd6f6b8d8?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
                 />
-                <Div38>Messages here</Div38>
+                {currentRoomId && (
+                  <MessageInput
+                    roomRef={doc(firestore, "Room", currentRoomId)}
+                  />
+                )}
               </Div37>
               <Img31
                 loading="lazy"
@@ -238,8 +264,9 @@ const Div32 = styled.div`
   display: flex;
   align-items: start;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
   gap: 20px;
-  padding: 9px 39px 9px 26px;
   @media (max-width: 991px) {
     max-width: 100%;
     flex-wrap: wrap;

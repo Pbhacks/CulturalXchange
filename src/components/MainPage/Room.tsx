@@ -57,8 +57,6 @@ const Room = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {}, []);
-
   if (room === "invalid") return <>INVALID ROOM!!!</>;
 
   if (!room || !messages) return <>Loading...</>;
