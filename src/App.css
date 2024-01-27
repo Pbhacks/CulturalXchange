@@ -1,11 +1,11 @@
 /* src/App.css */
 body {
-  transition: background 0.5s ease, color 0.5s ease;
+  /* transition: background 0.5s ease, color 0.5s ease;
   margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  align-items: center; /* Center horizontally */
+  align-items: center; Center horizontally */
 }
 body {
   margin: 0;
@@ -48,6 +48,10 @@ nav {
   border-radius: 10px;
 }
 
+span, p {
+  color: white;
+}
+
 ul {
   list-style: none;
   display: flex;
@@ -67,7 +71,7 @@ a {
 }
 
 /* Set body background color and text color based on the mode */
-body.light-mode {
+/* body.light-mode {
   background: var(--bg-color);
   color: var(--text-color);
 }
@@ -75,4 +79,4 @@ body.light-mode {
 body.dark-mode {
   background-color: var(--bg-color);
   color: var(--text-color);
-}
+} */
