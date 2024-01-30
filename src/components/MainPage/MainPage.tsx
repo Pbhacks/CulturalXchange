@@ -47,12 +47,10 @@ const MainPage = () => {
 
       <Section>
         <h2>Your current ChatList</h2>
-        <ChatList />
       </Section>
 
       <Section>
         <h2>Messages</h2>
-        <UserList />
         {/* Add messages list or component here */}
       </Section>
       <Section>
