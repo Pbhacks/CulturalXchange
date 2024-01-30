@@ -75,6 +75,7 @@ export default function MyComponent() {
               />
             </Div31>
             <Div34>
+              {/* rendering chat*/}
               {currentRoomId && <Chat roomId={currentRoomId} />}
               <Div35>
                 <Img26
@@ -106,6 +107,7 @@ export default function MyComponent() {
 }
 
 const Div = styled.div`
+  height: 100vh;
   overflow: scroll;
   display: flex;
   flex-direction: column;
@@ -135,6 +137,7 @@ const Column = styled.div`
 const Div3 = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
   @media (max-width: 991px) {
     max-width: 100%;
   }
@@ -162,7 +165,7 @@ const ChatList = styled.div`
     0.44999998807907104
   );
   display: flex;
-  padding-top: 44px;
+  padding-top: 10px;
   flex-direction: column;
   @media (max-width: 991px) {
     max-width: 100%;

@@ -15,17 +15,21 @@ const Chat = ({ roomId }: { roomId: string }) => {
   return (
     <MessageWrapper>
       {messages &&
-        messages.map(({ message, user }, index) => (
-          <div
-            key={index}
-            style={{
-              alignSelf: user.id === currentUser.uid ? "start" : "end",
-              color: user.id === currentUser.uid ? "black" : "red",
-            }}
-          >
-            {message}
-          </div>
-        ))}
+        messages.map(({ message, user }, index) => {
+          return (
+            <>
+              <div
+                key={index}
+                style={{
+                  alignSelf: user.id === currentUser.uid ? "start" : "end",
+                  // color: user.id === currentUser.uid ? "white" : "red",
+                }}
+              >
+                {message}
+              </div>
+            </>
+          );
+        })}
     </MessageWrapper>
   );
 };
@@ -33,7 +37,17 @@ const Chat = ({ roomId }: { roomId: string }) => {
 export default Chat;
 
 const MessageWrapper = styled.div`
+  margin-top: 16px;
+  margin-right: 8px;
   display: flex;
+  gap: 8px;
   width: 100%;
   flex-direction: column;
+  div {
+    width: 100px;
+    padding: 16px;
+    background: gray;
+    border-radius: 8px;
+    color: white;
+  }
 `;

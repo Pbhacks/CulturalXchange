@@ -40,15 +40,24 @@ const MessageInput = ({ roomRef }: { roomRef: DocumentReference }) => {
 export default MessageInput;
 
 const InputWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
   input {
+    width: 100%;
     background: none;
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid white;
+    color: white;
+    &::placeholder {
+      color: white;
+    }
   }
   button {
     background: none;
     cursor: pointer;
-    border: 1px solid gray;
+    border: 1px solid white;
+    color: white;
     border-radius: 0.5rem;
     padding: 0.2rem;
     margin-left: 10px;

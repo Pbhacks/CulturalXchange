@@ -2,11 +2,31 @@ import React from "react";
 import styled from "styled-components";
 
 const MetaInfo = () => {
+  const displayCurrentDate = () => {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1; // Months start at 0!
+    let dd = today.getDate();
+
+    return `${yyyy}-${mm}-${dd}`;
+  };
+
+  const displayCurrentTime = () => {
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let ampm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    const strTime = hours + " : " + minutes + " " + ampm;
+    return strTime;
+  };
+
   return (
     <MetaInfoWrapper>
       <Div10>
-        <Div11>DATE: 2024-01-01</Div11>
-        <Div12>TIME: 09 : 00 AM</Div12>
+        <Div11>DATE: {displayCurrentDate()}</Div11>
+        <Div12>TIME: {displayCurrentTime()}</Div12>
       </Div10>
       <Div13>
         <Div14>25℃</Div14>
