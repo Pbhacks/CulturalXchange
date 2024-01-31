@@ -35,10 +35,9 @@ export default Profile;
 
 const ProfileWrapper = styled.div`
   gap: 20px;
+  height: 100px;
   display: flex;
   @media (max-width: 991px) {
-    flex-direction: column;
-    align-items: stretch;
     gap: 0px;
   }
 `;
@@ -79,6 +78,7 @@ const Column3 = styled.div`
 `;
 
 const Div6 = styled.div`
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-self: stretch;

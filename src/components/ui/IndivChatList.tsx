@@ -40,8 +40,7 @@ const Div20 = styled.div`
   border-radius: 10px;
   background-color: var(--base-colour-1, rgba(84, 107, 232, 0.45));
   display: flex;
-  margin-top: 27px;
-  justify-content: space-between;
+  margin-top: 10px;
   gap: 20px;
   padding: 18px 80px 18px 16px;
   @media (max-width: 991px) {
@@ -55,16 +54,13 @@ const Img9 = styled.img`
   aspect-ratio: 0.89;
   object-fit: contain;
   object-position: center;
-  width: 52px;
+  width: 20px;
   overflow: hidden;
   max-width: 100%;
 `;
 
 const Div21 = styled.div`
-  align-self: start;
   display: flex;
-  flex-grow: 1;
-  flex-basis: 0%;
   flex-direction: column;
 `;
 
