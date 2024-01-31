@@ -3,10 +3,13 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { firestore } from "../../firebase";
-import { useSelector } from "react-redux";
 import { User } from "../../types/type";
 import ChatList from "./ChatList";
 import UserList from "./UserList";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "../../redux/authSlice.js";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
 
 const MainPageContainer = styled.div`
   max-width: 800px;
@@ -20,6 +23,20 @@ const Section = styled.section`
 
 const MainPage = () => {
   const user = useSelector((state: any) => state.auth.user as User);
+
+  const dispatch = useDispatch();
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      console.log("Sign-out successful");
+      dispatch(logout()); // Dispatch the logout action
+    } catch (error) {
+      console.error("Error signing out:", error.message);
+    }
+  };
+
+  
 
   useEffect(() => {
     if (!user) return;
@@ -42,6 +59,7 @@ const MainPage = () => {
       <h1>Main Page</h1>
       <Section>
         <h2>Contacts</h2>
+        <button onClick={handleSignOut}>Sign Out</button>
         {/* Add contacts list or component here */}
       </Section>
 

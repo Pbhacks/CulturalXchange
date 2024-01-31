@@ -1,4 +1,3 @@
-// src/Login.js
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,6 +9,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   TwitterAuthProvider,
+  createUserWithEmailAndPassword, // Import createUserWithEmailAndPassword
 } from "firebase/auth";
 import { auth, firestore } from "./firebase";
 import MainPage from "./components/MainPage/MainPage";
@@ -24,29 +24,68 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "./redux/authSlice";
 
-
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [emailOrPhone, setEmailOrPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
+  const [isSignInMode, setIsSignInMode] = useState(true); // Track login or signup mode
   const dispatch = useDispatch();
   const setNewUser = (user) => dispatch(setUser(user));
   const user = useSelector((state) => state.auth.user);
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const isEmail = /\S+@\S+\.\S+/.test(emailOrPhone);
+      const isPhone = /^\d{10}$/.test(emailOrPhone);
+
+      if (isEmail) {
+        await signInWithEmailAndPassword(auth, emailOrPhone, password);
+      } else if (isPhone) {
+        // Implement phone number authentication (if needed)
+        // Example: const confirmationResult = await sendSignInLinkToEmail(auth, emailOrPhone);
+      } else {
+        console.error("Invalid email or phone number format");
+        return;
+      }
+
       console.log("Login successful");
-      setUser(auth.currentUser);
+      setNewUser(auth.currentUser);
     } catch (error) {
       console.error("Error signing in:", error.message);
     }
 
-    setEmail("");
+    setEmailOrPhone("");
     setPassword("");
   };
 
+  const handleSignup = async (e) => {
+    e.preventDefault();
+
+    try {
+      const isEmail = /\S+@\S+\.\S+/.test(emailOrPhone);
+      const isPhone = /^\d{10}$/.test(emailOrPhone);
+
+      if (isEmail) {
+        await createUserWithEmailAndPassword(auth, emailOrPhone, password);
+      } else if (isPhone) {
+        // Implement phone number signup (if needed)
+        // Example: const confirmationResult = await sendSignInLinkToEmail(auth, emailOrPhone);
+      } else {
+        console.error("Invalid email or phone number format");
+        return;
+      }
+
+      console.log("Signup successful");
+      setNewUser(auth.currentUser);
+    } catch (error) {
+      console.error("Error signing up:", error.message);
+    }
+
+    setEmailOrPhone("");
+    setPassword("");
+  };
+  
   const addUser = async (user) => {
     const q = query(
       collection(firestore, "User"),
@@ -75,8 +114,8 @@ const Login = () => {
       });
     } else {
       const docSnap = docs.docs[0];
-
-      if (docs.docs[0].exists()) {
+  
+      if (docSnap.exists()) {
         const currentUser = docSnap.data();
         setNewUser(currentUser);
       } else {
@@ -84,6 +123,7 @@ const Login = () => {
       }
     }
   };
+  
 
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider();
@@ -107,14 +147,40 @@ const Login = () => {
       console.error("Error signing in with Twitter:", error.message);
     }
   };
+
+  const handleToggleMode = () => {
+    setIsSignInMode((prevMode) => !prevMode);
+    setEmailOrPhone("");
+    setPassword("");
+  };
+
+
   return (
     <div>
       {user ? (
         <MainPage />
       ) : (
         <div>
-          <div className="element">
-            <h2>Login Page</h2><br></br>
+          <div className="element" >
+            <h2>{isSignInMode ? "Login Page" : "Sign Up Page"}</h2><br></br>
+            <input
+              type="text"
+              placeholder="Email or Phone"
+              value={emailOrPhone}
+              onChange={(e) => setEmailOrPhone(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={isSignInMode ? handleLogin : handleSignup}>
+              {isSignInMode ? "Login" : "Sign Up"}
+            </button>
+            <button onClick={handleToggleMode}>
+              Go to {isSignInMode ? "Sign Up Page" : "Login Page"}
+            </button>
             <FontAwesomeIcon
               icon={faGoogleBrand}
               onClick={handleGoogleLogin}
