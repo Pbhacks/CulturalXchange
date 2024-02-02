@@ -15,6 +15,10 @@ import ChatList from "./components/MainPage/ChatList";
 import MyComponent from "./components/ui/PublishedComponent";
 
 const Navigation = () => {
+  const { pathname } = useLocation();
+  if (pathname === "/testing") {
+    return <></>;
+  }
   return (
     <nav>
       <ul>
@@ -33,12 +37,10 @@ const Navigation = () => {
 };
 
 const App = () => {
-  const { pathname } = useLocation();
-
   return (
     <Router>
       {/* Can render it when you want to render in page */}
-      {pathname !== "/testing" && <Navigation />}
+      <Navigation />
       <Routes>
         <Route path="/testing" element={<MyComponent />} />
         <Route
