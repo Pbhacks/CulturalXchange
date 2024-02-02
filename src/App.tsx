@@ -1,6 +1,12 @@
 // src/App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import Home from "./Home"; // Update this line
 import Login from "./Login"; // Update this line
 import "./App.css";
@@ -27,10 +33,12 @@ const Navigation = () => {
 };
 
 const App = () => {
+  const { pathname } = useLocation();
+
   return (
     <Router>
       {/* Can render it when you want to render in page */}
-      <Navigation />
+      {pathname !== "/testing" && <Navigation />}
       <Routes>
         <Route path="/testing" element={<MyComponent />} />
         <Route
