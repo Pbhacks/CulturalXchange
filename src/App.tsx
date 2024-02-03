@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home"; // Update this line
 import Login from "./Login"; // Update this line
-import "./App.css";
+
 import Room from "./components/MainPage/Room";
 import ChatList from "./components/MainPage/ChatList";
 import MyComponent from "./components/ui/PublishedComponent";
@@ -41,14 +41,7 @@ const App = () => {
             </div>
           }
         />
-        <Route
-          path="/login"
-          element={
-            <div className="container login">
-              <Login />
-            </div>
-          }
-        />
+        <Route path="/login" element={<Login />}/>
         <Route
           path="/chat/:chatListId"
           element={

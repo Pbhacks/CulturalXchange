@@ -23,6 +23,8 @@ import {
 } from "@firebase/firestore";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "./redux/authSlice";
+import "./login.css"
+
 
 const Login = () => {
   const [emailOrPhone, setEmailOrPhone] = useState("");
@@ -160,22 +162,38 @@ const Login = () => {
       {user ? (
         <MainPage />
       ) : (
-        <div>
-          <div className="element" >
-            <h2>{isSignInMode ? "Login Page" : "Sign Up Page"}</h2><br></br>
+        <div className="login">
+          <img className="login-child" alt="" src="/rectangle-7.svg" />
+          <img className="login-item" alt="" src="/ellipse-1.svg" />
+          <img className="login-inner" alt="" src="/ellipse-2.svg" />
+          <div >
+            <h2 className="sign-in">{isSignInMode ? "Login Page" : "Sign Up Page"}</h2><br/>
+            <div className="rectangle-parent">
+            <div className="group-child" />
+            <div className="emailphone-no">Email/phone no.
             <input
+              className="login-input"
               type="text"
               placeholder="Email or Phone"
               value={emailOrPhone}
               onChange={(e) => setEmailOrPhone(e.target.value)}
             />
-            <input
+            </div>
+            <div className="rectangle-group">
+            <div className="group-item" />
+            <div className="password">password
+           <input
+              className="login-input"
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button onClick={isSignInMode ? handleLogin : handleSignup}>
+        </div>
+      </div>
+            </div>
+           
+            <button className="login-btn" onClick={isSignInMode ? handleLogin : handleSignup}>
               {isSignInMode ? "Login" : "Sign Up"}
             </button>
             <button onClick={handleToggleMode}>
@@ -203,3 +221,38 @@ const Login = () => {
 };
 
 export default Login;
+
+// import "./Login.css";
+
+// const Login = () => {
+//   return (
+//     <div className="login">
+//       <img className="login-child" alt="" src="/rectangle-7.svg" />
+//       <img className="login-item" alt="" src="/ellipse-1.svg" />
+//       <img className="login-inner" alt="" src="/ellipse-2.svg" />
+//       <b className="sign-in">Sign in</b>
+//       <div className="rectangle-div" />
+//       <div className="login-child1" />
+//       <div className="rectangle-parent">
+//         <div className="group-child" />
+//         <div className="emailphone-no">Email/phone no.</div>
+//       </div>
+//       <div className="rectangle-group">
+//         <div className="group-item" />
+//         <div className="password">password</div>
+//       </div>
+//       <img className="image-1-icon" alt="" src="/image-1@2x.png" />
+//       <div className="component-3">
+//         <div className="component-3-child" />
+//         <div className="sign-in1">sign in</div>
+//       </div>
+//       <img className="group-icon" alt="" src="/group-48.svg" />
+//       <div className="or">OR</div>
+//       <img className="group-icon1" alt="" src="/group.svg" />
+//       <div className="login-child2" />
+//       <div className="already-have-account">{`Already have  account ? Log in `}</div>
+//     </div>
+//   );
+// };
+
+// export default Login;
