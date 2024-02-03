@@ -35,7 +35,6 @@ export default function MyComponent() {
             <Div4>
               <Profile />
             </Div4>
-            <MetaInfo />
             <ChatList>
               {chatList &&
                 chatList.map(({ roomId }) => {
