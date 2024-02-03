@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# CulturalXchange
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CulturalXchange is a platform dedicated to fostering cultural exchange and understanding among diverse communities. This project aims to create an inclusive space where people can share and celebrate their cultural heritage.
 
-## Available Scripts
+This project was mainly made by teams from India, Japan, South Korea and China.
 
-In the project directory, you can run:
+## Our Aim:
 
-### `npm start`
+With CulturalXchange, our primary goal is to foster a sense of unity and appreciation for the rich tapestry of cultures that make up our global community. We strive to break down cultural barriers and promote dialogue that leads to better understanding, tolerance, and respect among people from different backgrounds.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Multilingual Support**: Engage with users from around the world in their native languages.
+- **User Profiles**: Create personalized profiles to showcase your cultural background and interests.
+- **Media Sharing**: Share photos, videos, and other media to visually represent yourself or your culture.
+- **Discussion Forums:** Participate in discussions to learn about different perspectives and share your own. Explore a ton of topics.
+- **Language Learning:** Learn different languages form different cultures to better understand them and interact with people.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*This could be temporary as more things can be added or removed from here.*
+<br>
+Thank You, धन्यवाद, 감사합니다, ありがとうございます, 谢谢
