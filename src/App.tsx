@@ -1,6 +1,12 @@
 // src/App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import Home from "./Home"; // Update this line
 import Login from "./Login"; // Update this line
 import "./App.css";
@@ -9,6 +15,10 @@ import ChatList from "./components/MainPage/ChatList";
 import MyComponent from "./components/ui/PublishedComponent";
 
 const Navigation = () => {
+  const { pathname } = useLocation();
+  if (pathname === "/testing") {
+    return <></>;
+  }
   return (
     <nav>
       <ul>
