@@ -162,57 +162,52 @@ const Login = () => {
       {user ? (
         <MainPage />
       ) : (
-        <div className="login">
-          <img className="login-child" alt="" src="/rectangle-7.svg" />
-          <img className="login-item" alt="" src="/ellipse-1.svg" />
-          <img className="login-inner" alt="" src="/ellipse-2.svg" />
-          <div >
-            <h2 className="sign-in">{isSignInMode ? "Login Page" : "Sign Up Page"}</h2><br/>
-            <div className="rectangle-parent">
-            <div className="group-child" />
-            <div className="emailphone-no">Email/phone no.
+        <div className="section">
+          
+          <div className="div-block-2">
+          <div class="div-block"><img
+                    src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201.png"
+                    loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, 46vw"
+                    srcset="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201-p-500.png 500w, https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201-p-800.png 800w, https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201.png 949w"
+                    alt="" /></div>
+          <div className="div-block-3">
+          <div className="w-layout-blockcontainer container w-container">
+            <h2 className="heading">{isSignInMode ? "Login Page" : "Sign Up Page"}</h2><br/>
+            <div className="w-form">
+            <div className="form">
             <input
-              className="login-input"
+            className="text-field w-input"
               type="text"
               placeholder="Email or Phone"
               value={emailOrPhone}
               onChange={(e) => setEmailOrPhone(e.target.value)}
             />
-            </div>
-            <div className="rectangle-group">
-            <div className="group-item" />
-            <div className="password">password
            <input
-              className="login-input"
+             className="text-field-2 w-input"
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-        </div>
-      </div>
-            </div>
-           
-            <button className="login-btn" onClick={isSignInMode ? handleLogin : handleSignup}>
+            <button className="submit-button w-button" onClick={isSignInMode ? handleLogin : handleSignup}>
               {isSignInMode ? "Login" : "Sign Up"}
             </button>
-            <button onClick={handleToggleMode}>
-              Go to {isSignInMode ? "Sign Up Page" : "Login Page"}
-            </button>
-            <FontAwesomeIcon
-              icon={faGoogleBrand}
-              onClick={handleGoogleLogin}
-              style={{
-                cursor: "pointer",
-                marginRight: "10px",
-                fontSize: "2rem",
-              }}
-            />
-            <FontAwesomeIcon
-              icon={faTwitter}
-              onClick={handleTwitterLogin}
-              style={{ cursor: "pointer", fontSize: "2rem" }}
-            />
+            <p onClick={handleToggleMode} ><a href="#">{isSignInMode ? "Don't have account? Sign Up" : "Have an account? Login"}</a></p>
+            <p className="paragraph">OR</p>
+                            <div className="div-block-4">
+                                <div onClick={handleGoogleLogin}><img
+                                        src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bdfb7e9b85333f539464b8_Group.svg"
+                                        loading="lazy" alt="" class="login-img" /></div>
+                                <div onClick={handleTwitterLogin}><img
+                                        src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bdfb7e7a30057ce99e0055_Group%2048.svg"
+                                        loading="lazy" alt="" class="login-img" /></div>
+                            </div>
+            </div>
+            
+            </div>
+          </div>
+          
+          </div>
           </div>
         </div>
       )}
@@ -222,37 +217,3 @@ const Login = () => {
 
 export default Login;
 
-// import "./Login.css";
-
-// const Login = () => {
-//   return (
-//     <div className="login">
-//       <img className="login-child" alt="" src="/rectangle-7.svg" />
-//       <img className="login-item" alt="" src="/ellipse-1.svg" />
-//       <img className="login-inner" alt="" src="/ellipse-2.svg" />
-//       <b className="sign-in">Sign in</b>
-//       <div className="rectangle-div" />
-//       <div className="login-child1" />
-//       <div className="rectangle-parent">
-//         <div className="group-child" />
-//         <div className="emailphone-no">Email/phone no.</div>
-//       </div>
-//       <div className="rectangle-group">
-//         <div className="group-item" />
-//         <div className="password">password</div>
-//       </div>
-//       <img className="image-1-icon" alt="" src="/image-1@2x.png" />
-//       <div className="component-3">
-//         <div className="component-3-child" />
-//         <div className="sign-in1">sign in</div>
-//       </div>
-//       <img className="group-icon" alt="" src="/group-48.svg" />
-//       <div className="or">OR</div>
-//       <img className="group-icon1" alt="" src="/group.svg" />
-//       <div className="login-child2" />
-//       <div className="already-have-account">{`Already have  account ? Log in `}</div>
-//     </div>
-//   );
-// };
-
-// export default Login;

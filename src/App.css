@@ -1,0 +1,82 @@
+/* src/App.css */
+body {
+  /* transition: background 0.5s ease, color 0.5s ease;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center; Center horizontally */
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* background: url('https://source.unsplash.com/1600x900/?landscape') center/cover no-repeat fixed; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.element {
+  width: 600px;
+  height: 400px;
+  background: linear-gradient(
+    50deg,
+    rgba(255, 255, 255, 0.4) 12%,
+    rgba(255, 255, 255, 0.1) 77%
+  );
+  background-blend-mode: overlay;
+  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid transparent; /* Adjust the border size here */
+  border-radius: 20px;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+nav {
+  background: crimson; /* Purple background for the navigation bar */
+  padding: 10px;
+  width: 100%;
+  border: 2px solid blue;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+span, p {
+  color: white;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Take full width */
+}
+
+li {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Set body background color and text color based on the mode */
+/* body.light-mode {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+} */
