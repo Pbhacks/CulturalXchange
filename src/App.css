@@ -10,7 +10,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background: url('https://source.unsplash.com/1600x900/?landscape') center/cover no-repeat fixed;
+  /* background: url('https://source.unsplash.com/1600x900/?landscape') center/cover no-repeat fixed; */
   display: flex;
   align-items: center;
   justify-content: center;

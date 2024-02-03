@@ -8,11 +8,13 @@ import { useState, useEffect } from "react";
 import Chat from "./Chat";
 import { useSelector } from "react-redux";
 import { User } from "../../types/type";
-import { redirect } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import InputBar from "./InputBar";
 
 export default function MyComponent() {
   const { chatList } = useGetChatList();
+
+  const navigate = useNavigate();
 
   const user = useSelector((state: any) => state.auth.user as User);
 
@@ -33,7 +35,6 @@ export default function MyComponent() {
             <Div4>
               <Profile />
             </Div4>
-            <MetaInfo />
             <ChatList>
               {chatList &&
                 chatList.map(({ roomId }) => {
@@ -70,6 +71,8 @@ export default function MyComponent() {
                 />
               </Div32>
               <Img24
+                onClick={() => navigate(-1)}
+                alt="back_button"
                 loading="lazy"
                 srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
               />

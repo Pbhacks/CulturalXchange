@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useGetMessage from "../../hooks/useGetMessage";
 import { User } from "../../types/type";
 import { useSelector } from "react-redux";
@@ -7,6 +7,7 @@ import styled from "styled-components";
 const Chat = ({ roomId }: { roomId: string }) => {
   const { messages } = useGetMessage({ roomId });
   const currentUser = useSelector((state: any) => state.auth.user as User);
+  const [keyword, setKeyword] = useState<string>("");
 
   if (!messages) {
     <div>Waiting...</div>;
@@ -22,7 +23,10 @@ const Chat = ({ roomId }: { roomId: string }) => {
                 key={index}
                 style={{
                   alignSelf: user.id === currentUser.uid ? "start" : "end",
-                  // color: user.id === currentUser.uid ? "white" : "red",
+                  color:
+                    !message.includes(keyword) || keyword === ""
+                      ? "white"
+                      : "yellow",
                 }}
               >
                 {message}
@@ -30,6 +34,14 @@ const Chat = ({ roomId }: { roomId: string }) => {
             </>
           );
         })}
+      <section>
+        <input
+          placeholder="search message with keyword"
+          alt="search"
+          value={keyword}
+          onChange={(e) => setKeyword(e.target.value)}
+        />
+      </section>
     </MessageWrapper>
   );
 };
@@ -37,6 +49,7 @@ const Chat = ({ roomId }: { roomId: string }) => {
 export default Chat;
 
 const MessageWrapper = styled.div`
+  position: relative;
   margin-top: 16px;
   margin-right: 8px;
   display: flex;
@@ -49,5 +62,31 @@ const MessageWrapper = styled.div`
     background: gray;
     border-radius: 8px;
     color: white;
+  }
+  section {
+    width: calc(100% - 32px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    input {
+      width: 100%;
+      background: none;
+      border: none;
+      color: white;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: white;
+      }
+    }
   }
 `;
