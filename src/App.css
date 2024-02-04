@@ -70,6 +70,10 @@ a {
   color: #fff;
 }
 
+img {
+  cursor: pointer;
+}
+
 /* Set body background color and text color based on the mode */
 /* body.light-mode {
   background: var(--bg-color);

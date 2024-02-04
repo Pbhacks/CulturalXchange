@@ -23,8 +23,8 @@ import {
 } from "@firebase/firestore";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "./redux/authSlice";
-import "./login.css"
-
+import MyComponent from "./components/ui/PublishedComponent";
+import "./login.css";
 
 const Login = () => {
   const [emailOrPhone, setEmailOrPhone] = useState("");
@@ -87,7 +87,7 @@ const Login = () => {
     setEmailOrPhone("");
     setPassword("");
   };
-  
+
   const addUser = async (user) => {
     const q = query(
       collection(firestore, "User"),
@@ -116,7 +116,7 @@ const Login = () => {
       });
     } else {
       const docSnap = docs.docs[0];
-  
+
       if (docSnap.exists()) {
         const currentUser = docSnap.data();
         setNewUser(currentUser);
@@ -125,7 +125,6 @@ const Login = () => {
       }
     }
   };
-  
 
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider();
@@ -156,58 +155,80 @@ const Login = () => {
     setPassword("");
   };
 
-
   return (
     <div>
       {user ? (
-        <MainPage />
+        <MyComponent />
       ) : (
         <div className="section">
-          
           <div className="div-block-2">
-          <div class="div-block"><img
-                    src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201.png"
-                    loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, 46vw"
-                    srcset="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201-p-500.png 500w, https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201-p-800.png 800w, https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201.png 949w"
-                    alt="" /></div>
-          <div className="div-block-3">
-          <div className="w-layout-blockcontainer container w-container">
-            <h2 className="heading">{isSignInMode ? "Login Page" : "Sign Up Page"}</h2><br/>
-            <div className="w-form">
-            <div className="form">
-            <input
-            className="text-field w-input"
-              type="text"
-              placeholder="Email or Phone"
-              value={emailOrPhone}
-              onChange={(e) => setEmailOrPhone(e.target.value)}
-            />
-           <input
-             className="text-field-2 w-input"
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button className="submit-button w-button" onClick={isSignInMode ? handleLogin : handleSignup}>
-              {isSignInMode ? "Login" : "Sign Up"}
-            </button>
-            <p onClick={handleToggleMode} ><a href="#">{isSignInMode ? "Don't have account? Sign Up" : "Have an account? Login"}</a></p>
-            <p className="paragraph">OR</p>
-                            <div className="div-block-4">
-                                <div onClick={handleGoogleLogin}><img
-                                        src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bdfb7e9b85333f539464b8_Group.svg"
-                                        loading="lazy" alt="" class="login-img" /></div>
-                                <div onClick={handleTwitterLogin}><img
-                                        src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bdfb7e7a30057ce99e0055_Group%2048.svg"
-                                        loading="lazy" alt="" class="login-img" /></div>
-                            </div>
+            <div class="div-block">
+              <img
+                src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201.png"
+                loading="lazy"
+                sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, 46vw"
+                srcset="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201-p-500.png 500w, https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201-p-800.png 800w, https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201.png 949w"
+                alt=""
+              />
             </div>
-            
+            <div className="div-block-3">
+              <div className="w-layout-blockcontainer container w-container">
+                <h2 className="heading">
+                  {isSignInMode ? "Login Page" : "Sign Up Page"}
+                </h2>
+                <br />
+                <div className="w-form">
+                  <div className="form">
+                    <input
+                      className="text-field w-input"
+                      type="text"
+                      placeholder="Email or Phone"
+                      value={emailOrPhone}
+                      onChange={(e) => setEmailOrPhone(e.target.value)}
+                    />
+                    <input
+                      className="text-field-2 w-input"
+                      type="password"
+                      placeholder="Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <button
+                      className="submit-button w-button"
+                      onClick={isSignInMode ? handleLogin : handleSignup}
+                    >
+                      {isSignInMode ? "Login" : "Sign Up"}
+                    </button>
+                    <p onClick={handleToggleMode}>
+                      <a href="#">
+                        {isSignInMode
+                          ? "Don't have account? Sign Up"
+                          : "Have an account? Login"}
+                      </a>
+                    </p>
+                    <p className="paragraph">OR</p>
+                    <div className="div-block-4">
+                      <div onClick={handleGoogleLogin}>
+                        <img
+                          src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bdfb7e9b85333f539464b8_Group.svg"
+                          loading="lazy"
+                          alt=""
+                          class="login-img"
+                        />
+                      </div>
+                      <div onClick={handleTwitterLogin}>
+                        <img
+                          src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bdfb7e7a30057ce99e0055_Group%2048.svg"
+                          loading="lazy"
+                          alt=""
+                          class="login-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          
-          </div>
           </div>
         </div>
       )}
@@ -216,4 +237,3 @@ const Login = () => {
 };
 
 export default Login;
-
