@@ -1,0 +1,79 @@
+.home-page {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .home-page .div {
+    background-color: #ffffff;
+    width: 1728px;
+    height: 1117px;
+    position: relative;
+  }
+  
+  .home-page .cultural-xchange {
+    position: absolute;
+    width: 1315px;
+    height: 624px;
+    top: 183px;
+    left: 207px;
+  }
+  
+  .home-page .img {
+    position: absolute;
+    width: 1255px;
+    height: 146px;
+    top: 253px;
+    left: 29px;
+    object-fit: cover;
+  }
+  
+  .home-page .component {
+    position: absolute;
+    width: 356px;
+    height: 93px;
+    top: 842px;
+    left: 732px;
+    border-radius: 50px;
+    background: linear-gradient(
+      180deg,
+      rgb(1, 157, 249) 11.92%,
+      rgba(165.44, 220.44, 252.88, 0.35) 72.97%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  
+  .home-page .get-started {
+    position: absolute;
+    width: 230px;
+    height: 50px;
+    top: 21px;
+    left: 63px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: 50px;
+    white-space: nowrap;
+
+    /* a:link {
+        background-color: rgb(0, 174, 255);
+      }
+      
+      a:visited {
+        background-color: rgb(5, 190, 190);
+      }
+      
+      a:hover {
+        background-color: lightgreen;
+      }
+      
+      a:active {
+        background-color: hotpink;
+      };
+  }  */
+  
