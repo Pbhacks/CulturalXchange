@@ -40,19 +40,9 @@ const App = () => {
   return (
     <Router>
       {/* Can render it when you want to render in page */}
-      <Navigation />
       <Routes>
-        <Route path="/testing" element={<MyComponent />} />
         <Route
           path="/"
-          element={
-            <div className="container home">
-              <Home />
-            </div>
-          }
-        />
-        <Route
-          path="/login"
           element={
             <div className="container login">
               <Login />
@@ -60,22 +50,13 @@ const App = () => {
           }
         />
         <Route
-          path="/chat/:chatListId"
+          path="/login"
           element={
-            <div className="container chatList">
-              <ChatList />
+            <div className="container home">
+              <Login />
             </div>
           }
-        >
-          <Route
-            path=":roomId"
-            element={
-              <div className="container room">
-                <Room />
-              </div>
-            }
-          />
-        </Route>
+        />
       </Routes>
     </Router>
   );

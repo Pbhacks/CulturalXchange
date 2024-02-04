@@ -23,12 +23,11 @@ import {
 } from "@firebase/firestore";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "./redux/authSlice";
-
+import MyComponent from "./components/ui/PublishedComponent";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
   const dispatch = useDispatch();
   const setNewUser = (user) => dispatch(setUser(user));
   const user = useSelector((state) => state.auth.user);
@@ -110,11 +109,12 @@ const Login = () => {
   return (
     <div>
       {user ? (
-        <MainPage />
+        <MyComponent />
       ) : (
         <div>
           <div className="element">
-            <h2>Login Page</h2><br></br>
+            <h2>Login Page</h2>
+            <br></br>
             <FontAwesomeIcon
               icon={faGoogleBrand}
               onClick={handleGoogleLogin}
