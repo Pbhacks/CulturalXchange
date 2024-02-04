@@ -171,6 +171,7 @@ const Login = () => {
     } else {
       const docSnap = docs.docs[0];
 
+
       if (docSnap.exists()) {
         const currentUser = docSnap.data();
         setNewUser(currentUser);
