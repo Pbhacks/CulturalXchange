@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Home from "./Home"; // Update this line
 import Login from "./Login"; // Update this line
-import "./App.css";
+
 import Room from "./components/MainPage/Room";
 import ChatList from "./components/MainPage/ChatList";
 import MyComponent from "./components/ui/PublishedComponent";
@@ -44,11 +44,12 @@ const App = () => {
         <Route
           path="/"
           element={
-            <div className="container login">
-              <Login />
+            <div className="container home">
+              <Home />
             </div>
           }
         />
+        <Route path="/login" element={<Login />} />
         <Route
           path="/login"
           element={

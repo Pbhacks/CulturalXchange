@@ -1,0 +1,424 @@
+.main-page {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .main-page .div {
+    background-color: #ffffff;
+    width: 1715px;
+    height: 3503px;
+    position: relative;
+  }
+  
+  .main-page .overlap {
+    position: absolute;
+    width: 1715px;
+    height: 1061px;
+    top: 147px;
+    left: 0;
+    background-image: url(./img/whatsapp-image-2024-01-14-at-22-29-1.png);
+    background-size: 100% 100%;
+  }
+  
+  .main-page .forge-global-bonds {
+    position: absolute;
+    width: 1115px;
+    height: 127px;
+    top: 126px;
+    left: 308px;
+  }
+  
+  .main-page .connect-people {
+    position: absolute;
+    width: 1517px;
+    height: 96px;
+    top: 291px;
+    left: 106px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 45px;
+  }
+  
+  .main-page .component {
+    position: absolute;
+    width: 236px;
+    height: 93px;
+    top: 694px;
+    left: 1126px;
+    background-color: #ffffff;
+    border-radius: 100px;
+  }
+  
+  .main-page .sign-up {
+    position: absolute;
+    width: 218px;
+    height: 65px;
+    top: 13px;
+    left: 9px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 40px;
+  }
+  
+  .main-page .overlap-group-wrapper {
+    position: absolute;
+    width: 236px;
+    height: 93px;
+    top: 694px;
+    left: 364px;
+    background-color: #ffffff;
+    border-radius: 100px;
+  }
+  
+  .main-page .overlap-group {
+    position: relative;
+    height: 93px;
+    background-color: #ffffff;
+    border-radius: 100px;
+  }
+  
+  .main-page .log-in {
+    position: absolute;
+    width: 168px;
+    height: 62px;
+    top: 16px;
+    left: 33px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 40px;
+  }
+  
+  .main-page .cultural-xchange {
+    position: absolute;
+    width: 407px;
+    height: 82px;
+    top: 44px;
+    left: 30px;
+  }
+  
+  .main-page .img {
+    position: absolute;
+    width: 377px;
+    height: 44px;
+    top: 23px;
+    left: 15px;
+    object-fit: cover;
+  }
+  
+  .main-page .connecting-cultures {
+    position: absolute;
+    width: 1543px;
+    height: 65px;
+    top: 1282px;
+    left: 93px;
+    font-family: "Manrope-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #000000;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 60px;
+    white-space: nowrap;
+  }
+  
+  .main-page .forge-global {
+    position: absolute;
+    width: 1309px;
+    height: 77px;
+    top: 1411px;
+    left: 210px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #000000;
+    font-family: "Manrope-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 40px;
+  }
+  
+  .main-page .div-styles-content {
+    display: flex;
+    flex-direction: column;
+    width: 489px;
+    height: 364px;
+    align-items: flex-start;
+    gap: 17.98px;
+    padding: 30px 0px 22.24px;
+    position: absolute;
+    top: 1607px;
+    left: 978px;
+  }
+  
+  .main-page .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 67.99px 0px 0px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .main-page .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-family);
+    font-weight: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-weight);
+    color: var(--wwwtandemnet-144-0x-810158752441406-2defaultshark);
+    font-size: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-size);
+    letter-spacing: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-letter-spacing);
+    line-height: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-line-height);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 0;
+    -webkit-box-orient: vertical;
+    font-style: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-style);
+  }
+  
+  .main-page .p {
+    padding: 0px 4.99px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .main-page .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    margin-left: -0.01px;
+    font-family: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-font-family);
+    font-weight: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-font-weight);
+    color: var(--wwwtandemnet-144-0x-810158752441406-2defaultshark);
+    font-size: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-font-size);
+    letter-spacing: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-letter-spacing);
+    line-height: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-line-height);
+    font-style: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-font-style);
+  }
+  
+  .main-page .div-styles {
+    display: flex;
+    flex-direction: column;
+    max-width: 524px;
+    width: 524px;
+    height: 570px;
+    align-items: center;
+    justify-content: center;
+    padding: 173.5px 70px 173.48px;
+    position: absolute;
+    top: 2271px;
+    left: 140px;
+  }
+  
+  .main-page .div-styles-content-2 {
+    display: inline-flex;
+    margin-top: -42px;
+    margin-bottom: -42px;
+    margin-left: -75px;
+    margin-right: -75px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17.98px;
+    padding: 30px 0px 22.24px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .main-page .div-wrapper {
+    padding: 0px 150.99px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    height: 40.8px;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+  }
+  
+  .main-page .text-wrapper-3 {
+    position: relative;
+    width: 383px;
+    margin-top: -1px;
+    font-family: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-family);
+    font-weight: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-weight);
+    color: var(--wwwtandemnet-144-0x-810158752441406-2defaultshark);
+    font-size: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-size);
+    letter-spacing: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-letter-spacing);
+    line-height: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-line-height);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 0;
+    -webkit-box-orient: vertical;
+    font-style: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-style);
+  }
+  
+  .main-page .p-hd-eca {
+    padding: 0px 16.99px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .main-page .rectangle {
+    position: absolute;
+    width: 780px;
+    height: 464px;
+    top: 1607px;
+    left: 47px;
+    object-fit: cover;
+  }
+  
+  .main-page .div-styles-2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 524px;
+    width: 524px;
+    height: 570px;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 173.5px 70px 173.48px;
+    position: absolute;
+    top: 2889px;
+    left: 1032px;
+  }
+  
+  .main-page .heading-2 {
+    padding: 0px 164.99px 0px 0px;
+    margin-top: -47.01px;
+    display: flex;
+    flex-direction: column;
+    height: 40.8px;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+  }
+  
+  .main-page .text-wrapper-4 {
+    position: relative;
+    width: 383.99px;
+    height: 40.8px;
+    margin-top: -1px;
+    margin-right: -164.99px;
+    font-family: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-family);
+    font-weight: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-weight);
+    color: var(--wwwtandemnet-144-0x-810158752441406-2defaultshark);
+    font-size: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-size);
+    letter-spacing: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-letter-spacing);
+    line-height: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-line-height);
+    white-space: nowrap;
+    font-style: var(--www-tandem-net-1440x810-1587524414062-default-roboto-bold-30-font-style);
+  }
+  
+  .main-page .p-wrapper {
+    display: flex;
+    width: 383.99px;
+    margin-top: -6.21px;
+    margin-bottom: -47.01px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17.98px;
+    padding: 30px 0px 22.24px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .main-page .p-hd-bba {
+    padding: 0px 26.99px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .main-page .text-wrapper-5 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    margin-left: -0.01px;
+    margin-right: -26.99px;
+    font-family: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-font-family);
+    font-weight: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-font-weight);
+    color: var(--wwwtandemnet-144-0x-810158752441406-2defaultshark);
+    font-size: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-font-size);
+    letter-spacing: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-letter-spacing);
+    line-height: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-line-height);
+    font-style: var(--www-tandem-net-1440x810-1587524414062-default-roboto-light-21-font-style);
+  }
+  
+  .main-page .rectangle-2 {
+    top: 2271px;
+    left: 908px;
+    position: absolute;
+    width: 771px;
+    height: 479px;
+    object-fit: cover;
+  }
+  
+  .main-page .rectangle-3 {
+    top: 2951px;
+    left: 140px;
+    position: absolute;
+    width: 771px;
+    height: 479px;
+    object-fit: cover;
+  }
+  
+  .main-page .component-2 {
+    position: absolute;
+    width: 232px;
+    height: 82px;
+    top: -2921px;
+    left: 1112px;
+    background-image: url(./img/rectangle-15.svg);
+    background-size: 100% 100%;
+  }
+  
+  .main-page .text-wrapper-6 {
+    position: absolute;
+    width: 232px;
+    height: 82px;
+    top: -1px;
+    left: 0;
+    font-family: "Lucida Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #17a7f8;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
