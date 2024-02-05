@@ -10,16 +10,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout, selectUser } from "../../redux/authSlice.js";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
-
-const MainPageContainer = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-`;
-
-const Section = styled.section`
-  margin-top: 20px;
-`;
+import "../../MainPage.css"
+import img1 from "../../img/mainPage1.png"
+import img2 from "../../img/mainPage2.png"
+import img3 from "../../img/mainPage3.png"
 
 const MainPage = () => {
   const user = useSelector((state: any) => state.auth.user as User);
@@ -55,27 +49,61 @@ const MainPage = () => {
   }, [user]);
 
   return (
-    <MainPageContainer>
-      <h1>Main Page</h1>
-      <Section>
-        <h2>Contacts</h2>
-        <button onClick={handleSignOut}>Sign Out</button>
-        {/* Add contacts list or component here */}
-      </Section>
-
-      <Section>
-        <h2>Your current ChatList</h2>
-      </Section>
-
-      <Section>
-        <h2>Messages</h2>
-        {/* Add messages list or component here */}
-      </Section>
-      <Section>
-        <h2>Communities</h2>
-        {/* Add communities list or component here */}
-      </Section>
-    </MainPageContainer>
+    <>
+      <section className="mainpage-header">
+    <div className="mainpage-nav">
+      <div className="mainPage-mainPage-div-block-4">
+        <div className="mainPage-text-block">CulturalXchange</div>
+      </div>
+      <div>
+        <div className="mainPage-text-block-2">About</div>
+      </div>
+    </div>
+    <div className="mainpage-hero">
+      <h1 className="mainPage-heading">Forge Global Bonds</h1>
+      <p className="mainPage-paragraph">Connect people worldwide for peace and understanding. join us in fostering global friendship
+      </p>
+      <div className="mainPage-mainPage-div-block-5"><a href="\login" className="hero-btn w-button">Sign In</a><a href="#main-body"
+          className="hero-btn w-button">Explore</a></div>
+    </div>
+  </section>
+  <section id="main-body" className="mainpage-body">
+    <h1 className="mainPage-heading-2">Connecting Cultures for peace</h1>
+    <h2 className="mainPage-heading-3">forge global connections for peace on our plarform where millions connect and enage</h2>
+    <div className="mainPage-div-block">
+      <div className="mainPage-div-block-3"><img
+          src={img1}
+          alt="" /></div>
+      <div className="mainPage-div-block-2">
+        <h2 className="mainPage-heading-4">1. Join the community</h2>
+        <p>Sign up and become part of our global community dedicated to fostering connections, promoting peace, and
+          ensuring everyone has the right to speak. Our thorough application review, along with secure phone number
+          logins, guarantees a safe and enjoyable experience for all.</p>
+      </div>
+    </div>
+    <div className="mainPage-div-block revf">
+      <div className="mainPage-div-block-2">
+        <h2 className="mainPage-heading-5">2. Discover Diverse Communities</h2>
+        <p>Explore and connect with like-minded individuals from various worldwide communities. Our platform simplifies
+          the process of finding the perfect connection—whether based on interests, location, or language.</p>
+      </div>
+      <div className="mainPage-div-block-3"><img
+          src={img2}
+          alt="" /></div>
+    </div>
+    <div className="mainPage-div-block">
+      <div className="mainPage-div-block-3"><img
+          src={img3}
+          alt="" /></div>
+      <div className="mainPage-div-block-2">
+        <h2 className="mainPage-heading-6">3. Engage in Conversations</h2>
+        <p>Choose your preferred mode of communication—text, voice notes, audio, or video calls. Keep the conversation
+          flowing with in-app tools designed for seamless interaction. Embrace a platform where connections transcend
+          borders for a more harmonious world.</p>
+      </div>
+    </div>
+  </section>
+    </>
   );
 };
 

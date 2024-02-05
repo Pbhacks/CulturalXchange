@@ -19,6 +19,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setUser } from './redux/authSlice';
 import MyComponent from "./components/ui/PublishedComponent";
 import './login.css';
+import img1 from "./img/logIn1.png"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -162,7 +163,7 @@ const Login = () => {
         <div className="section">
           <div className="div-block-2">
             <div className="div-block">
-              {/* Your existing code for the image */}
+              <img src={img1} alt="" srcset="" />
             </div>
             <div className="div-block-3">
               <div className="w-layout-blockcontainer container w-container">
