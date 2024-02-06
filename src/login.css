@@ -2121,7 +2121,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .section {
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 100%;
   flex-direction: row;
   justify-content: center;
