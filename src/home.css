@@ -831,6 +831,21 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 767px) {
+  .home-w-button {
+    color: #fff;
+    line-height: inherit;
+    cursor: pointer;
+    background-color: #3898ec;
+    border: 0;
+    border-radius: 0;
+    padding: 9px 15px !important;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .home-button {
+    font-size: 1.5rem !important;
+    line-height: 1rem;
+  }
   .w-hidden-main, .w-hidden-medium {
     display: inherit !important;
   }

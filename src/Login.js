@@ -17,9 +17,9 @@ import {
 } from '@firebase/firestore';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUser } from './redux/authSlice';
-import MyComponent from "./components/ui/PublishedComponent";
 import './login.css';
 import img1 from "./img/logIn1.png"
+import MainFram from "./components/MainPage/MainFram.jsx"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -158,7 +158,7 @@ const Login = () => {
   return (
     <div>
       {user && user.emailVerified ? (
-        <MyComponent />
+        <MainFram />
       ) : (
         <div className="section">
           <div className="div-block-2">
