@@ -13,11 +13,12 @@ The primary aim of CulturalXchange is to create an inclusive online space where 
 ### Web App
 
 **Frontend** <br>
-The frontend architecture of CulturalXchange is meticulously crafted using React, a cutting-edge JavaScript library renowned for its versatility and performance in building dynamic user interfaces. React serves as the cornerstone of our frontend development, offering a robust framework for creating interactive elements that seamlessly respond to user input and deliver a fluid browsing experience. Complemented by the foundational technologies of HTML and CSS, the frontend components are meticulously designed with meticulous attention to detail.
+The frontend architecture of CulturalXchange is meticulously crafted using React, a cutting-edge JavaScript library renowned for its versatility and performance in building dynamic user interfaces. React serves as the cornerstone of our frontend development, offering a robust framework for creating interactive elements that seamlessly respond to user input and deliver a fluid browsing experience. Complemented by the foundational technologies of HTML and CSS, the frontend components are meticulously designed with meticulous attention to detail It also uses TypeScript as its main programming language.
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/react/react-original.svg" title="React JS" alt="React JS" width="60" height="60">&nbsp;
 <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/html5/html5-plain-wordmark.svg" title="HTML 5" alt="HTML 5" width="60" height="60">&nbsp;
 <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/css3/css3-plain-wordmark.svg" title="CSS 3" alt="CSS 3" width="60" height="60">&nbsp;
+<img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/typescript/typescript-original.svg" title="TypeScript" alt="TypeScript" width="60" height="60">&nbsp;
 
 **Backend** <br>
 The backend infrastructure is powered by Node.js, a runtime environment for executing JavaScript code server-side. Node.js enables efficient handling of server-side operations, such as data storage and retrieval. Firebase, a comprehensive platform for building and managing web applications, is leveraged for backend services, including authentication, database management, and hosting. Also using git for the version control and management. This combination of technologies ensures seamless communication between the frontend and backend components of the platform. <br>
