@@ -67,7 +67,7 @@ To access the full range of features on CulturalXchange, users are required to c
 
 ### Exploring Cultural Content
 
-rowse through the platform's extensive collection of cultural content by navigating through categories or using the search functionality. Discover articles, videos, images, and discussions spanning various cultural topics from around the world. Engage with content by liking, commenting, and sharing with your network.
+Browse through the platform's extensive collection of cultural content by navigating through categories or using the search functionality. Discover articles, videos, images, and discussions spanning various cultural topics from around the world. Engage with content by liking, commenting, and sharing with your network.
 
 ### Interacting with the Community
 
