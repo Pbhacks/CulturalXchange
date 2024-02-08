@@ -35,9 +35,13 @@ The integration of AI technologies into CulturalXchange augments its functionali
 
 Anticipating the evolving needs and preferences of its user base, CulturalXchange is poised to embark on a transformative journey of expansion and innovation. <br>
 
-**Android App:** In the near future, CulturalXchange will unveil its dedicated Android application, extending its reach to a wider audience of mobile users and enabling seamless access to cultural content on the go.
+**Android App:** In the near future, CulturalXchange will unveil its dedicated Android application, extending its reach to a wider audience of mobile users and enabling seamless access to cultural content on the go. <br>
 
-**iOS App:** Simultaneously, CulturalXchange will embark on iOS compatibility, ensuring a ubiquitous presence across diverse mobile platforms and enhancing user accessibility and convenience.
+<img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/android/android-original.svg" title="Android" alt="Android" width="60" height="60">&nbsp;
+
+**iOS App:** Simultaneously, CulturalXchange will embark on iOS compatibility, ensuring a ubiquitous presence across diverse mobile platforms and enhancing user accessibility and convenience. <br>
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/apple/apple-original.svg" title="Apple" alt="Apple" width="60" height="60">&nbsp;
 
 **XR (Extended Reality):** Embracing the frontier of extended reality technologies, CulturalXchange envisions immersive cultural experiences through virtual and augmented reality. By harnessing XR, the platform aims to transcend traditional boundaries of interaction, offering users unprecedented opportunities for immersive cultural exploration and engagement.
 
