@@ -13,7 +13,7 @@ The primary aim of CulturalXchange is to create an inclusive online space where 
 ### Web App
 
 **Frontend** <br>
-The frontend architecture of CulturalXchange is meticulously crafted using React, a cutting-edge JavaScript library renowned for its versatility and performance in building dynamic user interfaces. React serves as the cornerstone of our frontend development, offering a robust framework for creating interactive elements that seamlessly respond to user input and deliver a fluid browsing experience. Complemented by the foundational technologies of HTML and CSS, the frontend components are meticulously designed with meticulous attention to detail It also uses TypeScript as its main programming language.
+The frontend architecture of CulturalXchange is meticulously crafted using React, a cutting-edge JavaScript library renowned for its versatility and performance in building dynamic user interfaces. React serves as the cornerstone of our frontend development, offering a robust framework for creating interactive elements that seamlessly respond to user input and deliver a fluid browsing experience. Complemented by the foundational technologies of HTML and CSS, the frontend components are meticulously designed with meticulous attention to detail. It also uses TypeScript as its main programming language.
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/react/react-original.svg" title="React JS" alt="React JS" width="60" height="60">&nbsp;
 <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/html5/html5-plain-wordmark.svg" title="HTML 5" alt="HTML 5" width="60" height="60">&nbsp;
