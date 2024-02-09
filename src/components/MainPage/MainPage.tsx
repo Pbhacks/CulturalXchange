@@ -14,6 +14,8 @@ import "../../MainPage.css"
 import img1 from "../../img/mainPage1.png"
 import img2 from "../../img/mainPage2.png"
 import img3 from "../../img/mainPage3.png"
+import img4 from "../../img/mainPage4.jpeg"
+import img5 from "../../img/mainPage5.jpeg"
 
 const MainPage = () => {
   const user = useSelector((state: any) => state.auth.user as User);
@@ -100,6 +102,24 @@ const MainPage = () => {
         <p>Choose your preferred mode of communication—text, voice notes, audio, or video calls. Keep the conversation
           flowing with in-app tools designed for seamless interaction. Embrace a platform where connections transcend
           borders for a more harmonious world.</p>
+      </div>
+    </div>
+    <div className="mainPage-div-block revf">
+      <div className="mainPage-div-block-2">
+        <h2 className="mainPage-heading-5">4. Cultural inspiration</h2>
+        <p>Imagine a world where borders dissolve, and cultures converge effortlessly through the tap of a screen. With our messenger app designed for cultural exchange, this vision becomes a vibrant reality. Users from every corner of the globe, from the bustling streets of Mumbai to the serene temples of Kyoto, can seamlessly connect, share experiences, and foster mutual understanding. Through real-time text, voice, and video communication, individuals can immerse themselves in the rich tapestry of global diversity without leaving their homes. Whether it's learning about traditional Chinese calligraphy or discussing the latest Bollywood masterpiece, our platform serves as a gateway to boundless cultural exploration.</p>
+      </div>
+      <div className="mainPage-div-block-3"><img
+          src={img4}
+          alt="" /></div>
+    </div>
+    <div className="mainPage-div-block">
+      <div className="mainPage-div-block-3"><img
+          src={img5}
+          alt="" /></div>
+      <div className="mainPage-div-block-2">
+        <h2 className="mainPage-heading-6">5. Heritage</h2>
+        <p>The benefits of our messenger app extend far beyond mere conversation. By facilitating cross-cultural dialogue, we cultivate empathy, break down stereotypes, and promote global harmony. Users gain invaluable insights into different customs, traditions, and perspectives, fostering a deeper appreciation for the world's cultural mosaic. Businesses leverage this diversity to forge international partnerships, tapping into new markets and unlocking limitless opportunities for growth. Furthermore, our platform serves as a catalyst for social change, empowering individuals to collaborate on global issues such as climate change, human rights, and social justice. Through shared experiences and meaningful connections, our messenger app becomes more than just a tool—it becomes a force for positive change in an interconnected world.</p>
       </div>
     </div>
   </section>
