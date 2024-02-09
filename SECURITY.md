@@ -4,7 +4,7 @@
 
 ## Reporting a Vulnerability 🔒
 
-At [Your Company Name], we take security issues seriously. We appreciate your efforts to responsibly disclose your findings and will make every effort to acknowledge your contributions.
+At Revolutionary Commision of People, we take security issues seriously. We appreciate your efforts to responsibly disclose your findings and will make every effort to acknowledge your contributions.
 
 To report a security vulnerability, please email us at [pb.ceomail@gmail.com](mailto:pb.ceomail@gmail.com) with the details of your discovery. We encourage you to include the following information in your report:
 
@@ -31,7 +31,7 @@ Once a fix has been developed and tested, we will release an update to address t
 
 ## Contact Us 📧
 
-For further inquiries or assistance, please contact us at [security@example.com](mailto:security@example.com). We appreciate your cooperation in helping us maintain the security of [Your App Name].
+For further inquiries or assistance, please contact us at [pb.ceomail@gmail.com](mailto:pb.ceomail@gmail.com). We appreciate your cooperation in helping us maintain the security of [Your App Name].
 
 ---
 
