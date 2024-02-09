@@ -35,4 +35,3 @@ For further inquiries or assistance, please contact us at [pb.ceomail@gmail.com]
 
 ---
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pbhacks&layout=compact&theme=radical)
