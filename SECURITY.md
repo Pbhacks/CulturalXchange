@@ -31,8 +31,8 @@ Once a fix has been developed and tested, we will release an update to address t
 
 ## Contact Us 📧
 
-For further inquiries or assistance, please contact us at [pb.ceomail@gmail.com](mailto:pb.ceomail@gmail.com). We appreciate your cooperation in helping us maintain the security of [Your App Name].
+For further inquiries or assistance, please contact us at [pb.ceomail@gmail.com](mailto:pb.ceomail@gmail.com). We appreciate your cooperation in helping us maintain the security of YugenSangrahara (CulturalInspire).
 
 ---
 
-[![GitHub Analytics](https://ga-beacon.appspot.com/UA-123456789-0/github.com/pbhacks/CulturalXchange/README.md?pixel)](https://github.com/igrigorik/ga-beacon)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pbhacks&layout=compact&theme=radical)
