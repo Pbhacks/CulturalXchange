@@ -18,7 +18,7 @@
     "react-chatbot-kit": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-phone-input-2": "^2.15.1",
-    "react-phone-number-input": "^3.0.0",
+    "react-phone-number-input": "^3.3.9",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.1",
     "react-scripts": "^5.0.1",
