@@ -1,6 +1,6 @@
 # Security Policy 🛡️
 
-![Security](https://media.giphy.com/media/3oEduWYlG4WL9NVrfW/giphy.gif)
+![Security](https://images.squarespace-cdn.com/content/v1/6059ef5d59f1411908292205/4370a25e-b47d-4647-a0fa-36fce5eb5ea5/Hacking-Cybersecurity.gif)
 
 ## Reporting a Vulnerability 🔒
 
