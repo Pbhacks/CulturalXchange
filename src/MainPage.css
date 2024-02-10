@@ -2201,6 +2201,30 @@ textarea.w-input, textarea.w-select {
   padding: 20px 40px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.hero-btn:hover {
+  background-color: var(--black); 
+  color: var(--white); 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-btn:hover {
+  animation: buttonPulse 0.5s ease infinite; 
 }
 
 .mainPage-heading-2 {
