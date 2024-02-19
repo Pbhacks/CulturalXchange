@@ -1,9 +1,4 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGoogle as faGoogleBrand,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import {
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -12,7 +7,6 @@ import {
   createUserWithEmailAndPassword, // Import createUserWithEmailAndPassword
 } from "firebase/auth";
 import { auth, firestore } from "./firebase";
-import MainPage from "./components/MainPage/MainPage";
 import {
   collection,
   doc,

@@ -31,7 +31,7 @@ const useGetMessage = ({ roomId }: { roomId: string }) => {
     const unsub = onSnapshot(q, (snapshot) => {
       let data = [];
       snapshot.forEach((doc) => {
-        data = [...data, doc.data()];
+        data = [...data, { mid: doc.id, ...doc.data() }];
       });
       setMessages(data);
     });

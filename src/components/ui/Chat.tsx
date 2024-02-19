@@ -3,6 +3,9 @@ import useGetMessage from "../../hooks/useGetMessage";
 import { User } from "../../types/type";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { firestore } from "../../firebase";
+import { doc } from "@firebase/firestore";
+import { removeMessage } from "../../api/api";
 
 const Chat = ({ roomId }: { roomId: string }) => {
   const { messages } = useGetMessage({ roomId });
@@ -16,17 +19,22 @@ const Chat = ({ roomId }: { roomId: string }) => {
   return (
     <MessageWrapper>
       {messages &&
-        messages.map(({ message, user }, index) => {
+        messages.map(({ mid, message, user }, index) => {
+          const isUsersMessage = user.id === currentUser.uid;
           return (
             <>
               <div
                 key={index}
                 style={{
-                  alignSelf: user.id === currentUser.uid ? "start" : "end",
+                  alignSelf: isUsersMessage ? "start" : "end",
                   color:
                     !message.includes(keyword) || keyword === ""
                       ? "white"
                       : "yellow",
+                }}
+                onClick={async () => {
+                  if (!isUsersMessage) return;
+                  await removeMessage(doc(firestore, "Message", mid));
                 }}
               >
                 {message}
@@ -36,7 +44,7 @@ const Chat = ({ roomId }: { roomId: string }) => {
         })}
       <section>
         <input
-          placeholder="search message with keyword"
+          placeholder="Search message with keyword"
           alt="search"
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
