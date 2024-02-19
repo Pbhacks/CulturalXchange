@@ -2078,6 +2078,8 @@ textarea.w-input, textarea.w-select {
   justify-content: center;
   align-items: center;
   display: flex;
+  background: linear-gradient(180deg, rgb(5.83, 2.35, 176.16) 28.51%, rgb(0, 0, 0) 63.12%);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .home-button {
@@ -2118,5 +2120,5 @@ textarea.w-input, textarea.w-select {
 }
 
 .home-btn:hover {
-  animation: buttonPulse 0.5s ease infinite;
+  animation: step-start 0.5s ease infinite;
 }
