@@ -4,16 +4,28 @@ import useGetChatListName from "../../hooks/useGetChatListName";
 
 interface IndivChatListProps {
   roomId: string;
+  keyword: string;
   setRoomId: Dispatch<SetStateAction<string>>;
   setConnectName: Dispatch<SetStateAction<string>>;
 }
 
 const IndivChatList = ({
   roomId,
+  keyword,
   setConnectName,
   setRoomId,
 }: IndivChatListProps) => {
   const { chatListName } = useGetChatListName({ roomId });
+
+  if (!chatListName) return <>Waiting...</>;
+
+  if (
+    keyword.length !== 0 &&
+    chatListName[0] &&
+    !chatListName[0].includes(keyword)
+  ) {
+    return <></>;
+  }
 
   return (
     <Div20

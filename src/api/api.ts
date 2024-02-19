@@ -4,6 +4,7 @@ import {
   DocumentReference,
   addDoc,
   collection,
+  deleteDoc,
   doc,
   getDoc,
   getDocs,
@@ -108,6 +109,13 @@ export const addMessage = async (
 };
 
 // removeMessage
+export const removeMessage = async (messageRef: DocumentReference) => {
+  try {
+    await deleteDoc(doc(firestore, "Message", messageRef.id));
+  } catch (err) {
+    console.error(err);
+  }
+};
 
 // getChatList
 export const getChatListSnapshot = async (chatListId: string) => {

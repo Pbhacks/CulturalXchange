@@ -1,23 +1,22 @@
 import * as React from "react";
 import styled from "styled-components";
-import IndivChatList from "./IndivChatList";
 import Profile from "./Profile";
-import MetaInfo from "./MetaInfo";
-import useGetChatList from "../../hooks/useGetChatList";
 import { useState, useEffect } from "react";
 import Chat from "./Chat";
 import { User } from "../../types/type";
 import { redirect, useNavigate } from "react-router-dom";
 import InputBar from "./InputBar";
+
+import UserList from "./UserList";
+=======
 import { useDispatch, useSelector } from "react-redux";
 import { logout, selectUser } from "../../redux/authSlice.js";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 
 
-export default function MyComponent() {
-  const { chatList } = useGetChatList();
 
+export default function MyComponent() {
   const navigate = useNavigate();
 
   const user = useSelector((state: any) => state.auth.user as User);
@@ -51,25 +50,11 @@ export default function MyComponent() {
             <Div4>
               <Profile />
             </Div4>
-            <ChatList>
-              {chatList &&
-                chatList.map(({ roomId }) => {
-                  return (
-                    <IndivChatList
-                      roomId={roomId}
-                      setRoomId={setRoomId}
-                      setConnectName={setContactName}
-                    />
-                  );
-                })}
-              <Div28>
-                <Img21
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/39b75ad870f45ce18e62289f2d1095161a7bff5111bb68c2d6962a3cfe6f4fe9?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"
-                />
-                <Div29> Universal Search</Div29>
-              </Div28>
-            </ChatList>
+            <UserList
+              contactName={contactName}
+              setRoomId={setRoomId}
+              setContactName={setContactName}
+            />
           </Div3>
         </Column>
         <Column4>
@@ -173,65 +158,6 @@ const Div4 = styled.div`
   @media (max-width: 991px) {
     max-width: 100%;
     padding: 0 20px;
-  }
-`;
-
-const ChatList = styled.div`
-  background-color: rgba(
-    80.00000283122063,
-    68.00000354647636,
-    56.000000461936,
-    0.44999998807907104
-  );
-  display: flex;
-  padding-top: 10px;
-  flex-direction: column;
-  @media (max-width: 991px) {
-    max-width: 100%;
-  }
-`;
-
-const Div28 = styled.div`
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 250, 250, 0.24);
-  z-index: 10;
-  display: flex;
-  margin-top: 71px;
-  justify-content: space-between;
-  gap: 19px;
-  padding: 14px 24px 14px 12px;
-  @media (max-width: 991px) {
-    max-width: 100%;
-    flex-wrap: wrap;
-    padding-right: 20px;
-    margin-top: 40px;
-  }
-`;
-
-const Img21 = styled.img`
-  aspect-ratio: 0.96;
-  object-fit: contain;
-  object-position: center;
-  width: 24px;
-  overflow: hidden;
-  max-width: 100%;
-  margin: auto 0;
-`;
-
-const Div29 = styled.div`
-  justify-content: center;
-  color: var(--base-colour-2, #fff);
-  white-space: nowrap;
-  border-radius: 40px;
-  background-color: var(--base-colour-1, rgba(84, 107, 232, 0.45));
-  flex-grow: 1;
-  align-items: start;
-  padding: 14px 60px 14px 15px;
-  font: 300 14px/143% Segoe UI, sans-serif;
-  @media (max-width: 991px) {
-    white-space: initial;
-    max-width: 100%;
-    padding-right: 20px;
   }
 `;
 

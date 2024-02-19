@@ -1,12 +1,23 @@
+
+import React, { useState } from "react";
+=======
 import React, { useState } from 'react';
 import { signInWithPopup, TwitterAuthProvider } from 'firebase/auth';
+
 import {
   signInWithEmailAndPassword,
   sendEmailVerification,
   GoogleAuthProvider,
+
+  TwitterAuthProvider,
+  createUserWithEmailAndPassword, // Import createUserWithEmailAndPassword
+} from "firebase/auth";
+import { auth, firestore } from "./firebase";
+=======
   createUserWithEmailAndPassword,
 } from 'firebase/auth';
 import { auth, firestore } from './firebase';
+
 import {
   collection,
   doc,
