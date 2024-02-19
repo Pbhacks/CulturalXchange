@@ -26,15 +26,17 @@ const Chat = ({ roomId }: { roomId: string }) => {
               <div
                 key={index}
                 style={{
-                  alignSelf: isUsersMessage ? "start" : "end",
+                  alignSelf: !isUsersMessage ? "start" : "end",
                   color:
                     !message.includes(keyword) || keyword === ""
                       ? "white"
                       : "yellow",
+                  cursor: "pointer",
                 }}
                 onClick={async () => {
                   if (!isUsersMessage) return;
                   await removeMessage(doc(firestore, "Message", mid));
+                  console.log("re");
                 }}
               >
                 {message}
