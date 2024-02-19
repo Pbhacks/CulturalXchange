@@ -8,7 +8,7 @@ import { redirect, useNavigate } from "react-router-dom";
 import InputBar from "./InputBar";
 
 import UserList from "./UserList";
-=======
+
 import { useDispatch, useSelector } from "react-redux";
 import { logout, selectUser } from "../../redux/authSlice.js";
 import { signOut } from "firebase/auth";
