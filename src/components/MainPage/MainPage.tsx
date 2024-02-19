@@ -56,7 +56,7 @@ const MainPage = () => {
         <div className="mainPage-text-block">CulturalXchange</div>
       </div>
       <div>
-        <div className="mainPage-text-block-2">About</div>
+      <button className="mainPage-text-block-2" onClick={() => window.location.href = "Aboutus1"}>About</button>
       </div>
     </div>
     <div className="mainpage-hero">
