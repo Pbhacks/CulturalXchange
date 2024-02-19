@@ -3,11 +3,18 @@ import styled from "styled-components";
 import Profile from "./Profile";
 import { useState, useEffect } from "react";
 import Chat from "./Chat";
-import { useSelector } from "react-redux";
 import { User } from "../../types/type";
 import { redirect, useNavigate } from "react-router-dom";
 import InputBar from "./InputBar";
+
 import UserList from "./UserList";
+=======
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "../../redux/authSlice.js";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
+
+
 
 export default function MyComponent() {
   const navigate = useNavigate();
@@ -17,9 +24,21 @@ export default function MyComponent() {
   const [contactName, setContactName] = useState<string>("TestName");
   const [currentRoomId, setRoomId] = useState<string>("");
 
+  const dispatch = useDispatch();
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      console.log("Sign-out successful");
+      dispatch(logout()); // Dispatch the logout action
+    } catch (error) {
+      console.error("Error signing out:", error.message);
+    }
+  };
+
   useEffect(() => {
     if (!user) {
-      redirect("/");
+      redirect("/login");
     }
   }, [user]);
 
@@ -53,7 +72,7 @@ export default function MyComponent() {
                 />
               </Div32>
               <Img24
-                onClick={() => navigate(-1)}
+                onClick={handleSignOut}
                 alt="back_button"
                 loading="lazy"
                 srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/55e8a47e6f08aeb9cf9b7ec95e0d5d5a5e7ae04e96bbb30f697f23b2eaefbd88?apiKey=6432bfca9c544a2fbbfea017dc3ba42f&"

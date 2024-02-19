@@ -1,12 +1,23 @@
+
 import React, { useState } from "react";
+=======
+import React, { useState } from 'react';
+import { signInWithPopup, TwitterAuthProvider } from 'firebase/auth';
+
 import {
   signInWithEmailAndPassword,
-  signInWithPopup,
+  sendEmailVerification,
   GoogleAuthProvider,
+
   TwitterAuthProvider,
   createUserWithEmailAndPassword, // Import createUserWithEmailAndPassword
 } from "firebase/auth";
 import { auth, firestore } from "./firebase";
+=======
+  createUserWithEmailAndPassword,
+} from 'firebase/auth';
+import { auth, firestore } from './firebase';
+
 import {
   collection,
   doc,
@@ -14,16 +25,18 @@ import {
   query,
   setDoc,
   where,
-} from "@firebase/firestore";
-import { useDispatch, useSelector } from "react-redux";
-import { setUser } from "./redux/authSlice";
-import MyComponent from "./components/ui/PublishedComponent";
-import "./login.css";
+} from '@firebase/firestore';
+import { useSelector, useDispatch } from 'react-redux';
+import { setUser } from './redux/authSlice';
+import './login.css';
+import img1 from "./img/logIn1.png"
+import MainFram from "./components/MainPage/MainFram.jsx"
 
 const Login = () => {
-  const [emailOrPhone, setEmailOrPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isSignInMode, setIsSignInMode] = useState(true); // Track login or signup mode
+  const [isSignInMode, setIsSignInMode] = useState(true);
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
   const dispatch = useDispatch();
   const setNewUser = (user) => dispatch(setUser(user));
   const user = useSelector((state) => state.auth.user);
@@ -32,61 +45,62 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const isEmail = /\S+@\S+\.\S+/.test(emailOrPhone);
-      const isPhone = /^\d{10}$/.test(emailOrPhone);
+      const isEmail = /\S+@\S+\.\S+/.test(email);
 
       if (isEmail) {
-        await signInWithEmailAndPassword(auth, emailOrPhone, password);
-      } else if (isPhone) {
-        // Implement phone number authentication (if needed)
-        // Example: const confirmationResult = await sendSignInLinkToEmail(auth, emailOrPhone);
+        const { user } = await signInWithEmailAndPassword(auth, email, password);
+
+        if (!user.emailVerified) {
+          console.log("Email not verified. Please verify your email.");
+          return;
+        }
+
+        console.log("Login successful");
+        setNewUser(user);
       } else {
-        console.error("Invalid email or phone number format");
+        console.error("Invalid email format");
         return;
       }
 
-      console.log("Login successful");
-      setNewUser(auth.currentUser);
+      setEmail("");
+      setPassword("");
     } catch (error) {
       console.error("Error signing in:", error.message);
     }
-
-    setEmailOrPhone("");
-    setPassword("");
   };
 
   const handleSignup = async (e) => {
     e.preventDefault();
 
     try {
-      const isEmail = /\S+@\S+\.\S+/.test(emailOrPhone);
-      const isPhone = /^\d{10}$/.test(emailOrPhone);
+      let user;
 
-      if (isEmail) {
-        await createUserWithEmailAndPassword(auth, emailOrPhone, password);
-      } else if (isPhone) {
-        // Implement phone number signup (if needed)
-        // Example: const confirmationResult = await sendSignInLinkToEmail(auth, emailOrPhone);
-      } else {
-        console.error("Invalid email or phone number format");
-        return;
+      if (email) {
+        // Create user
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+
+        // Access user from userCredential
+        user = userCredential.user;
+
+        // Send verification email
+        await sendEmailVerification(user);
+
+        console.log("Email verification sent to:", user.email);
+        setShowVerificationMessage(true);
       }
 
       console.log("Signup successful");
-      setNewUser(auth.currentUser);
+      setNewUser(user);
     } catch (error) {
       console.error("Error signing up:", error.message);
     }
 
-    setEmailOrPhone("");
+    setEmail("");
     setPassword("");
   };
 
   const addUser = async (user) => {
-    const q = query(
-      collection(firestore, "User"),
-      where("uid", "==", user.uid)
-    );
+    const q = query(collection(firestore, "User"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
       await setDoc(doc(firestore, "User", user.uid), {
@@ -127,6 +141,7 @@ const Login = () => {
       console.log("Google login successful");
       const user = res.user;
       await addUser(user);
+      setNewUser(user);
     } catch (error) {
       console.error("Error signing in with Google:", error.message);
     }
@@ -135,35 +150,31 @@ const Login = () => {
   const handleTwitterLogin = async () => {
     const provider = new TwitterAuthProvider();
     try {
-      await signInWithPopup(auth, provider);
+      const res = await signInWithPopup(auth, provider);
       console.log("Twitter login successful");
-      setNewUser(auth.currentUser);
+      const user = res.user;
+      await addUser(user);
     } catch (error) {
       console.error("Error signing in with Twitter:", error.message);
     }
   };
+  
 
   const handleToggleMode = () => {
     setIsSignInMode((prevMode) => !prevMode);
-    setEmailOrPhone("");
+    setEmail("");
     setPassword("");
   };
 
   return (
     <div>
-      {user ? (
-        <MyComponent />
+      {user && user.emailVerified ? (
+        <MainFram />
       ) : (
         <div className="section">
           <div className="div-block-2">
-            <div class="div-block">
-              <img
-                src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201.png"
-                loading="lazy"
-                sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, 46vw"
-                srcset="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201-p-500.png 500w, https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201-p-800.png 800w, https://assets-global.website-files.com/65bdd5d09760d72632451374/65bddba716b61d97d01e3f29_image%201.png 949w"
-                alt=""
-              />
+            <div className="div-block">
+              <img src={img1} alt="" srcset="" />
             </div>
             <div className="div-block-3">
               <div className="w-layout-blockcontainer container w-container">
@@ -173,13 +184,23 @@ const Login = () => {
                 <br />
                 <div className="w-form">
                   <div className="form">
-                    <input
-                      className="text-field w-input"
-                      type="text"
-                      placeholder="Email or Phone"
-                      value={emailOrPhone}
-                      onChange={(e) => setEmailOrPhone(e.target.value)}
-                    />
+                    {isSignInMode ? (
+                      <input
+                        className="text-field w-input"
+                        type="text"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    ) : (
+                      <input
+                        className="text-field w-input"
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    )}
                     <input
                       className="text-field-2 w-input"
                       type="password"
@@ -187,19 +208,33 @@ const Login = () => {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button
-                      className="submit-button w-button"
-                      onClick={isSignInMode ? handleLogin : handleSignup}
-                    >
-                      {isSignInMode ? "Login" : "Sign Up"}
-                    </button>
-                    <p onClick={handleToggleMode}>
-                      <a href="#">
-                        {isSignInMode
-                          ? "Don't have account? Sign Up"
-                          : "Have an account? Login"}
-                      </a>
-                    </p>
+                    {isSignInMode ? (
+                      <button
+                        className="submit-button w-button"
+                        onClick={handleLogin}
+                      >
+                        Login
+                      </button>
+                    ) : (
+                      <button
+                        className="submit-button w-button"
+                        onClick={handleSignup}
+                      >
+                        Sign Up
+                      </button>
+                    )}
+                    {isSignInMode ? (
+                      <p onClick={handleToggleMode}>
+                        <a href="#">Don't have an account? Sign Up</a>
+                      </p>
+                    ) : showVerificationMessage ? (
+                      <p className="verification-message">
+                        Please verify your email to proceed then{" "}
+                        <a href="#" onClick={handleToggleMode}>
+                          LogIn
+                        </a>
+                      </p>
+                    ) : null}
                     <p className="paragraph">OR</p>
                     <div className="div-block-4">
                       <div onClick={handleGoogleLogin}>
@@ -207,7 +242,7 @@ const Login = () => {
                           src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bdfb7e9b85333f539464b8_Group.svg"
                           loading="lazy"
                           alt=""
-                          class="login-img"
+                          className="login-img"
                         />
                       </div>
                       <div onClick={handleTwitterLogin}>
@@ -215,7 +250,7 @@ const Login = () => {
                           src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65bdfb7e7a30057ce99e0055_Group%2048.svg"
                           loading="lazy"
                           alt=""
-                          class="login-img"
+                          className="login-img"
                         />
                       </div>
                     </div>

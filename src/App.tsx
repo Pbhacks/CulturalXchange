@@ -13,6 +13,7 @@ import Login from "./Login"; // Update this line
 import Room from "./components/MainPage/Room";
 import ChatList from "./components/MainPage/ChatList";
 import MyComponent from "./components/ui/PublishedComponent";
+import MainPage from "./components/MainPage/MainPage";
 
 const Navigation = () => {
   const { pathname } = useLocation();
@@ -55,6 +56,14 @@ const App = () => {
           element={
             <div className="container home">
               <Login />
+            </div>
+          }
+        />
+        <Route
+          path="/MainPage"
+          element={
+            <div >
+              <MainPage />
             </div>
           }
         />
