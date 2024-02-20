@@ -1,66 +1,65 @@
-body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: rgb(0,0,0);
-    background: linear-gradient(37deg, rgba(0,0,0,1) 9%, rgba(0,0,0,1) 35%, rgba(0,19,138,1) 89%);
-    color: white; 
-    margin: 0; 
-    padding: 0;
-  }
-  
-  
-  #aboutus {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  h1,
-  h2,
-  p,
-  .button {
-    color: transparent;
-    text-shadow: 0 0 0.5px #0a61ef;
-  }
-  
-  h1 {
-    font-size: 2em;
-    margin: 20px;
-    text-align: left;
-  }
-  
-  h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1em;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: #f0f0f0;
-    border: 2px solid #3299f2;
-    color: #508fda;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    background-color: #0062cc;
-    color: white;
-  }
-  
+#aboutus {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0,0,0);
+  background: linear-gradient(37deg, rgba(0,0,0,1) 9%, rgba(0,0,0,1) 35%, rgba(0,19,138,1) 89%);
+  color: white; 
+  margin: 0; 
+  padding: 0;
+  flex-direction: column; /* Change flex direction to column */
+}
+
+#aboutus > * {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+}
+
+h1,
+h2,
+p,
+.button {
+  color: transparent;
+  text-shadow: 0 0 0.5px #0a61ef;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 20px 0; /* Adjust margin */
+  text-align: center; /* Center align */
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center; /* Center align */
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #3299f2;
+  color: #508fda;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #0062cc;
+  color: white;
+}
