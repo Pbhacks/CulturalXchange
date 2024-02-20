@@ -41,12 +41,6 @@ function MainFram() {
             </a>
           </div>
           <div className="mainframdivblock3">
-            <i style={{ color: "gray" }} className="bi bi-alexa"></i>
-            <Link to="/ai/" className="link-block w-inline-block">
-              <div className="text-block">MyAI</div>
-            </Link>
-          </div>
-          <div className="mainframdivblock3">
             <i
               style={{ color: "gray" }}
               className="bi bi-question-circle-fill"
