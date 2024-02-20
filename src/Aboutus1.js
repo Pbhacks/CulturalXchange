@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
-    <link rel="stylesheet" href="AboutUS1.css" />
-  </head>
-  <body>
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Aboutus1.css'; // Import the CSS file
+
+function AboutUs() {
+  return (
     <div id="aboutus">
       <h1>CulturalXchange</h1>
       <h2>"ABOUT US"</h2>
@@ -22,7 +19,9 @@
         The People Around The World And Share Your Cultural And Language
         Experience.
       </p>
-      <a href="Aboutus2.html" class="button">Know More</a>
+      <Link to="/Aboutus2" className="button">Know More</Link>
     </div>
-  </body>
-</html>
+  );
+}
+
+export default AboutUs;
