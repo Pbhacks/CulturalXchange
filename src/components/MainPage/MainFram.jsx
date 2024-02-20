@@ -1,4 +1,3 @@
-// MainFram.js
 import React from "react";
 import MyComponent from "../ui/PublishedComponent";
 import "./mainFramStyle.css";
@@ -24,36 +23,37 @@ function MainFram() {
               style={{ color: "gray" }}
               className="bi bi-chat-left-dots-fill"
             ></i>
-            <a href="#" className="link-block w-inline-block">
+            <Link to="#" className="link-block w-inline-block">
               <div className="text-block">Chats</div>
-            </a>
+            </Link>
           </div>
           <div className="mainframdivblock3">
             <i style={{ color: "gray" }} className="bi bi-person-fill"></i>
-            <a href="#" className="link-block w-inline-block">
+            <Link to="#" className="link-block w-inline-block">
               <div className="text-block">Status</div>
-            </a>
+            </Link>
           </div>
           <div className="mainframdivblock3">
             <i style={{ color: "gray" }} className="bi bi-person-hearts"></i>
-            <a href="#" className="link-block w-inline-block">
+            {/* Integrate Communities Page here */}
+            <Link to="/commspage/Comms" className="link-block w-inline-block">
               <div className="text-block">Community</div>
-            </a>
+            </Link>
           </div>
           <div className="mainframdivblock3">
             <i
               style={{ color: "gray" }}
               className="bi bi-question-circle-fill"
             ></i>
-            <a href="#" className="link-block w-inline-block">
+            <Link to="#" className="link-block w-inline-block">
               <div className="text-block">Help</div>
-            </a>
+            </Link>
           </div>
           <div className="mainframdivblock3 btm">
             <i style={{ color: "gray" }} className="bi bi-gear-fill"></i>
-            <a href="#" className="link-block w-inline-block">
+            <Link to="#" className="link-block w-inline-block">
               <div className="text-block">Setting</div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
