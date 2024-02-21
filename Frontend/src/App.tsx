@@ -17,6 +17,7 @@ import MainPage from "./components/MainPage/MainPage";
 import Aboutus1 from './Aboutus1';
 import Aboutus2 from "./Aboutus2";
 import Comms from './commspage/Comms';
+import MyAi from './components/MainPage/MyAi';
 
 const Navigation = () => {
   const { pathname } = useLocation();
@@ -76,6 +77,7 @@ const App = () => {
       <Route path="/Aboutus1" element={<Aboutus1 />} />
         <Route path="/Aboutus2" element={<Aboutus2 />} />
         <Route path="/commspage/Comms" element={<Comms />} />
+        <Route path="/ai" element={<MyAi/>}/>
       </Routes>
     </Router>
   );
