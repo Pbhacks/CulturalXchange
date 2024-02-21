@@ -1,3 +1,4 @@
+// MainFram.js
 import React from "react";
 import MyComponent from "../ui/PublishedComponent";
 import "./mainFramStyle.css";
@@ -23,15 +24,15 @@ function MainFram() {
               style={{ color: "gray" }}
               className="bi bi-chat-left-dots-fill"
             ></i>
-            <Link to="#" className="link-block w-inline-block">
+            <a href="#" className="link-block w-inline-block">
               <div className="text-block">Chats</div>
-            </Link>
+            </a>
           </div>
           <div className="mainframdivblock3">
             <i style={{ color: "gray" }} className="bi bi-person-fill"></i>
-            <Link to="#" className="link-block w-inline-block">
+            <a href="#" className="link-block w-inline-block">
               <div className="text-block">Status</div>
-            </Link>
+            </a>
           </div>
           <div className="mainframdivblock3">
             <i style={{ color: "gray" }} className="bi bi-person-hearts"></i>
@@ -45,15 +46,15 @@ function MainFram() {
               style={{ color: "gray" }}
               className="bi bi-question-circle-fill"
             ></i>
-            <Link to="#" className="link-block w-inline-block">
+            <a href="#" className="link-block w-inline-block">
               <div className="text-block">Help</div>
-            </Link>
+            </a>
           </div>
           <div className="mainframdivblock3 btm">
             <i style={{ color: "gray" }} className="bi bi-gear-fill"></i>
-            <Link to="#" className="link-block w-inline-block">
+            <a href="#" className="link-block w-inline-block">
               <div className="text-block">Setting</div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

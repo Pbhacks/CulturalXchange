@@ -10,7 +10,7 @@
 .culturalxchange,
 .culturalxchange1,
 .button
-.home {
+.sim {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,20 +26,20 @@
   flex-direction: row;
   max-width: 100%;
 }
-.home,
-.home1 {
+.sim,
+.sim1 {
   flex: 1;
 }
-.home1 {
+.sim1 {
   height: 82px;
   position: relative;
 }
-.home {
+.sim {
   background-color: var(--color-white);
   flex-direction: row;
 }
 
-.home {
+.sim {
   display: flex;
   align-items: center;
   justify-content: end;

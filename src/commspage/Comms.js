@@ -18,7 +18,7 @@ const CommunitiesPage = () => {
             <div className="culturalxchange1">CulturalXchange</div>
           </div>
           <div className="f-r-a-m-e1">
-            <div className="home">
+            <div className="sim">
               <button onClick={() => handleNavigation('/MainPage')} className="button">
                 Home
               </button>

@@ -2071,6 +2071,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .home-section {
+
   min-height: 100vh;
   grid-column-gap: 5rem;
   grid-row-gap: 5rem;

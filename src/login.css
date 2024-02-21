@@ -2128,6 +2128,8 @@ textarea.w-input, textarea.w-select {
   align-items: stretch;
   padding: 0;
   display: flex;
+  background: rgb(0,0,0);
+background: linear-gradient(41deg, rgba(0,0,0,1) 53%, rgba(176,32,32,1) 54%, rgba(37,0,138,1) 56%);
 }
 
 .div-block {
