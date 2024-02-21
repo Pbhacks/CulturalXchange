@@ -77,7 +77,7 @@ npm start
 
 ### Installation
 
-To run the frontend, follow these steps:
+To run the Backend, follow these steps:
 
 1. Navigate to the `Backend` directory:
 
