@@ -16,6 +16,7 @@ export interface Room {
 }
 
 export interface Message {
+  mid: string;
   user: DocumentReference;
   room: DocumentReference;
   message: string;

@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-lucida-sans: "Lucida Sans";
+  --www-tandem-net-1440x8101587524414062-default-roboto-light-21: Roboto;
+  --font-manrope: Manrope;
+  --font-sans-serif-collection: "Sans Serif Collection";
+
+  /* font sizes */
+  --font-size-26xl: 45px;
+  --font-size-17xl: 36px;
+  --font-size-8xl: 27px;
+  --font-size-16xl: 35px;
+  --www-tandem-net-1440x8101587524414062-default-roboto-light-21-size: 21px;
+  --font-size-mid: 17px;
+  --www-tandem-net-1440x8101587524414062-default-roboto-bold-30-size: 30px;
+  --font-size-lg: 18px;
+  --font-size-5xl: 24px;
+  --font-size-13xl: 32px;
+  --font-size-lgi: 19px;
+  --font-size-7xl: 26px;
+  --font-size-10xl: 29px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-gainsboro-100: #d9d9d9;
+  --color-deepskyblue: #18a8f9;
+  --color-black: #000;
+  --color-lightgray: #d4d4d4;
+  --color-whitesmoke: #f0f0f0;
+  --color-dodgerblue: #0093fa;
+
+  /* Gaps */
+  --gap-29xl: 48px;
+  --gap-39xl: 58px;
+  --gap-xl: 20px;
+  --gap-45xl: 64px;
+  --gap-0: 0px;
+  --gap-383xl: 402px;
+  --gap-19xl: 38px;
+  --gap-106xl: 125px;
+
+  /* Paddings */
+  --padding-23xl: 42px;
+  --padding-18xl: 37px;
+  --padding-46xl: 65px;
+  --padding-8xl: 27px;
+  --padding-81xl: 100px;
+  --padding-xl: 20px;
+  --padding-82xl: 101px;
+  --padding-2xl: 21px;
+  --padding-47xl: 66px;
+  --padding-76xl: 95px;
+  --padding-43xl: 62px;
+  --padding-3xs: 10px;
+  --padding-25xl: 44px;
+  --padding-154xl-5: 173.5px;
+  --padding-51xl: 70px;
+  --padding-94xl: 113px;
+  --padding-16xl: 35px;
+  --padding-11xl: 30px;
+  --padding-3xl-2: 22.2px;
+  --padding-62xl: 81px;
+  --padding-35xl: 54px;
+  --padding-27xl: 46px;
+  --padding-4xl: 23px;
+  --padding-sm: 14px;
+  --padding-mid: 17px;
+  --padding-19xl: 38px;
+  --padding-9xl: 28px;
+  --padding-12xl: 31px;
+  --padding-base: 16px;
+  --padding-10xl: 29px;
+  --padding-41xl: 60px;
+
+  /* Border radiuses */
+  --br-31xl: 50px;
+  --br-81xl: 100px;
+}

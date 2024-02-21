@@ -7,8 +7,14 @@ import PrivateChatRoomBtn from "./PrivateChatRoomBtn";
 
 const UserList = () => {
   const [userList, setUserList] = useState<User[]>(null);
+  const [keyword, setKeyword] = useState<string>();
 
   const user = useSelector((state: any) => state.auth.user as User);
+
+  const searchedUserList =
+    keyword.length === 0
+      ? userList
+      : userList.filter(({ name }) => name.includes(keyword));
 
   useEffect(() => {
     const q = query(collection(firestore, "User"));
@@ -32,7 +38,7 @@ const UserList = () => {
 
   return (
     <div>
-      {userList.map(({ name, uid }) => {
+      {searchedUserList.map(({ name, uid }) => {
         if (user.uid === uid) return <></>;
 
         return (
@@ -43,6 +49,14 @@ const UserList = () => {
           </>
         );
       })}
+      <div>
+        <input
+          onChange={(e) => setKeyword(e.target.value)}
+          value={keyword}
+          placeholder="find user with keyword"
+          style={{ background: "black" }}
+        />
+      </div>
     </div>
   );
 };

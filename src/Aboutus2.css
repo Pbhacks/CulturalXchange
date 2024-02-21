@@ -1,0 +1,884 @@
+
+.culturalxchange5 {
+  margin: 0;
+  height: 82px;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  line-height: 125%;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+.culturalxchange4,
+.ellipse-designer-names {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.culturalxchange4 {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.ellipse-designer-names {
+  width: 427px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xs);
+  box-sizing: border-box;
+}
+.rectangle-div {
+  height: 159px;
+  width: 1654px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-whitesmoke);
+  border: 1px solid var(--color-dodgerblue);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.the-inspiration-of,
+.the-project-has {
+  margin: 0;
+}
+.the-inspiration-of-container {
+  height: 83px;
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  z-index: 1;
+}
+.rectangle-group {
+  align-self: stretch;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-whitesmoke);
+  border: 1px solid var(--color-dodgerblue);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--padding-10xl) 0;
+  min-height: 159px;
+  max-width: 100%;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-manrope);
+}
+.frame-cultural-xchange-text,
+.group-design-team-members {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.group-design-team-members {
+  flex: 1;
+  flex-direction: column;
+  gap: 28px 0;
+  text-align: center;
+  font-size: var(--font-size-26xl);
+  font-family: var(--font-lucida-sans);
+}
+.frame-cultural-xchange-text {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-base) 0 0;
+  box-sizing: border-box;
+}
+.mask-group-frame-components {
+  height: 341px;
+  width: 354px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-gainsboro-100);
+  min-width: 354px;
+  max-width: 100%;
+}
+.frame-child1 {
+  height: 347px;
+  width: 972px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+  display: none;
+  max-width: 100%;
+}
+.blank-line1,
+.his-dedication-to,
+.priyant-a-passionate,
+.worlds-to-break {
+  margin: 0;
+  font-weight: 500;
+}
+.serves-as-the {
+  font-weight: 500;
+}
+.span {
+  font-size: 20px;
+  font-family: var(--font-manrope);
+}
+.serves-as-the-driving-force-be {
+  margin: 0;
+}
+.priyant-a-passionate-container {
+  position: relative;
+  text-transform: capitalize;
+  z-index: 1;
+}
+.rectangle-container,
+.slice-vector-vector {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.rectangle-container {
+  height: 347px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-41xl) 43px var(--padding-41xl) var(--padding-25xl);
+  box-sizing: border-box;
+  min-width: 972px;
+}
+.slice-vector-vector {
+  align-self: stretch;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.president,
+.priyant-banerjee {
+  margin: 0;
+}
+.priyant-banerjee-president-container1 {
+  width: 100%;
+}
+.priyant-banerjee-president-container {
+  width: 354px;
+  height: 85px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+.ellipse-rushabh-dorgeai {
+  width: 1607px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 38px 0;
+  max-width: 100%;
+}
+.frame-design-team-members {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  max-width: 100%;
+}
+.rushabh-dorge-slice {
+  width: 100%;
+  height: calc(100% - 11px);
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 11px;
+  left: 0;
+  z-index: 2;
+}
+.frame-project-inspiration {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-25xl) var(--padding-19xl) 0 var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: 125px 0;
+  min-height: 1110px;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(
+    --www-tandem-net-1440x8101587524414062-default-roboto-bold-30-size
+  );
+  font-family: var(--font-manrope);
+}
+.frame-child2 {
+  height: 347px;
+  width: 972px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+  display: none;
+  max-width: 100%;
+}
+.bhavesh-ahirrao-a,
+.group-div {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+.bhavesh-ahirrao-a {
+  height: 165px;
+  flex: 1;
+  position: relative;
+  text-transform: capitalize;
+  font-weight: 500;
+  align-items: center;
+  z-index: 1;
+}
+.group-div {
+  width: 972px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+  flex-direction: row;
+  align-items: flex-end;
+  padding: var(--padding-62xl) 56px var(--padding-62xl) 55px;
+  box-sizing: border-box;
+  min-width: 972px;
+  min-height: 347px;
+}
+.ellipse-priyant-banerjee {
+  align-self: stretch;
+  height: 341px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-gainsboro-100);
+}
+.bhavesh-ahirrao,
+.director-of-designs {
+  margin: 0;
+}
+.bhavesh-ahirrao-director-container {
+  align-self: stretch;
+  height: 85px;
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.frame-group-cultural-xchange {
+  width: 354px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 38px 0;
+  min-width: 354px;
+  max-width: 100%;
+  font-size: var(--font-size-5xl);
+}
+.slice-design-frames {
+  height: calc(100% - 28px);
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 28px;
+  left: 0;
+  z-index: 2;
+}
+.frame-bhavesh-ahirrao {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 381px var(--padding-76xl) 0 58px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1135px;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(
+    --www-tandem-net-1440x8101587524414062-default-roboto-bold-30-size
+  );
+  font-family: var(--font-manrope);
+}
+.ellipse-div {
+  align-self: stretch;
+  height: 341px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-gainsboro-100);
+}
+.hyeonggeun-oh,
+.main-developer {
+  margin: 0;
+}
+.hyeonggeun-oh-main-container {
+  align-self: stretch;
+  height: 85px;
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.ellipse-parent {
+  width: 354px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 38px 0;
+  min-width: 354px;
+  max-width: 100%;
+}
+.frame-child3 {
+  height: 347px;
+  width: 972px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+  display: none;
+  max-width: 100%;
+}
+.hyeonggeun-oh-a,
+.rectangle-parent1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+.hyeonggeun-oh-a {
+  height: 261px;
+  flex: 1;
+  position: relative;
+  text-transform: capitalize;
+  font-weight: 500;
+  z-index: 1;
+}
+.rectangle-parent1 {
+  width: 972px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+  flex-direction: row;
+  padding: 40px var(--padding-mid) var(--padding-27xl) var(--padding-base);
+  box-sizing: border-box;
+  min-width: 972px;
+  font-size: var(
+    --www-tandem-net-1440x8101587524414062-default-roboto-bold-30-size
+  );
+}
+.frame-bhavesh-ahirrao-child {
+  height: calc(100% - 28px);
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 28px;
+  left: 0;
+  z-index: 2;
+}
+.frame-bhavesh-ahirrao1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 322px var(--padding-35xl) 0 99px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1135px;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-manrope);
+}
+.frame-child4 {
+  height: 347px;
+  width: 972px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+  display: none;
+  max-width: 100%;
+}
+.blank-line2,
+.rushabh-dorage-a {
+  margin: 0;
+}
+.rushabh-dorage-a-container {
+  height: 264px;
+  flex: 1;
+  position: relative;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  z-index: 1;
+}
+.a-i-group-frame,
+.rectangle-parent2 {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.rectangle-parent2 {
+  align-self: stretch;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+  flex-direction: row;
+  justify-content: center;
+  padding: var(--padding-12xl) var(--padding-23xl) var(--padding-12xl) 41px;
+  min-height: 347px;
+}
+.a-i-group-frame {
+  width: 972px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-mid) 0 0;
+  min-width: 972px;
+}
+.ellipse-rushabh-dorge {
+  align-self: stretch;
+  height: 341px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-gainsboro-100);
+}
+.ai-lead,
+.rushabh-dorage {
+  margin: 0;
+}
+.rushabh-dorage-ai-container {
+  align-self: stretch;
+  height: 85px;
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.ellipse-rushabh-dorge-parent {
+  width: 354px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 38px 0;
+  min-width: 354px;
+  max-width: 100%;
+  font-size: var(--font-size-5xl);
+}
+.image-vector-frame-child {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.image-vector-frame {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 363px var(--padding-16xl) 280px;
+  box-sizing: border-box;
+  position: relative;
+  gap: 0 272px;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(
+    --www-tandem-net-1440x8101587524414062-default-roboto-bold-30-size
+  );
+  font-family: var(--font-manrope);
+}
+.i-n-t-e-l-slice-child {
+  height: 342px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  mix-blend-mode: normal;
+}
+.x-jpeg {
+  height: 246.9px;
+  width: 295.6px;
+  top: 37.2px;
+  left: 1674px;
+  object-fit: cover;
+}
+.g12-icon,
+.mask-group-icon,
+.x-jpeg {
+  position: absolute;
+  margin: 0 !important;
+  z-index: 1;
+}
+.g12-icon {
+  height: 310px;
+  width: 281.5px;
+  top: 10.3px;
+  right: 1231.4px;
+}
+.mask-group-icon {
+  height: 274.8px;
+  width: 246.8px;
+  right: 340.9px;
+  bottom: 30px;
+}
+.vector-rectangle-icon,
+.vector-rectangle-icon1 {
+  height: 246.9px;
+  width: 252.4px;
+  position: absolute;
+  margin: 0 !important;
+  top: 37.2px;
+  right: 2057.3px;
+  z-index: 1;
+}
+.vector-rectangle-icon1 {
+  z-index: 2;
+}
+.image-2-icon,
+.image-3-icon {
+  position: absolute;
+  margin: 0 !important;
+  object-fit: cover;
+  z-index: 1;
+}
+.image-2-icon {
+  height: 274.8px;
+  width: 288.1px;
+  right: 802.5px;
+  bottom: 30px;
+}
+.image-3-icon {
+  height: 301.7px;
+  width: 302.2px;
+  top: 10.3px;
+  right: 1614.3px;
+}
+.i-n-t-e-l-slice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.amd-jpeg {
+  position: absolute;
+  top: 51.7px;
+  left: 141.5px;
+  width: 214px;
+  height: 232.5px;
+  object-fit: cover;
+  z-index: 1;
+}
+.a-m-d-jpeg-intel-p-n-g-child,
+.intel-png {
+  position: absolute;
+  top: 53.7px;
+  left: 525.3px;
+  width: 219.6px;
+  height: 232.5px;
+  z-index: 1;
+}
+.intel-png {
+  top: 50.6px;
+  left: 914.8px;
+  width: 227.1px;
+  object-fit: cover;
+}
+.figma-svg-icon {
+  position: absolute;
+  top: 52.7px;
+  left: 1295.8px;
+  width: 183.9px;
+  height: 231.4px;
+  overflow: hidden;
+  z-index: 1;
+}
+.a-m-d-jpeg-intel-p-n-g {
+  width: 4420px;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: -2692px;
+  bottom: 0;
+}
+.a-m-d-jpeg-intel-p-n-g-wrapper,
+.about-us-2-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+  overflow-x: auto; 
+}
+.a-m-d-jpeg-intel-p-n-g-wrapper {
+  height: 342px;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+}
+.about-us-2-inner {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 1px var(--padding-9xl);
+  box-sizing: border-box;
+}
+.all-rights-reserved,
+.rcop-2024 {
+  margin: 0;
+}
+.rcop-2024-all-container {
+  height: 61px;
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+.about-us-2,
+.rights-label {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.rights-label {
+  width: 378px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 var(--padding-19xl);
+  max-width: 100%;
+}
+.about-us-2 {
+  width: 100%;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 0 var(--padding-xl);
+  letter-spacing: normal;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: rgba(0, 0, 0, 0.46);
+  font-family: var(--font-sans-serif-collection);
+}
+@media screen and (max-width: 1575px) {
+  .mask-group-frame-components,
+  .rectangle-container {
+    flex: 1;
+  }
+  .slice-vector-vector {
+    flex-wrap: wrap;
+  }
+  .group-div {
+    flex: 1;
+    min-height: auto;
+  }
+  .frame-group-cultural-xchange {
+    flex: 1;
+  }
+  .frame-bhavesh-ahirrao {
+    flex-wrap: wrap;
+  }
+  .ellipse-parent,
+  .rectangle-parent1 {
+    flex: 1;
+  }
+  .frame-bhavesh-ahirrao1 {
+    flex-wrap: wrap;
+  }
+  .a-i-group-frame,
+  .ellipse-rushabh-dorge-parent {
+    flex: 1;
+  }
+  .image-vector-frame {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1275px) {
+  .rectangle-container {
+    padding-left: 22px;
+    padding-right: var(--padding-2xl);
+    box-sizing: border-box;
+    min-width: 100%;
+  }
+  .frame-project-inspiration {
+    gap: 125px 0;
+    padding-top: var(--padding-10xl);
+    box-sizing: border-box;
+  }
+  .group-div {
+    padding-left: var(--padding-8xl);
+    padding-right: var(--padding-9xl);
+    box-sizing: border-box;
+    min-width: 100%;
+  }
+  .frame-bhavesh-ahirrao {
+    padding-left: var(--padding-10xl);
+    padding-right: 47px;
+    box-sizing: border-box;
+  }
+  .rectangle-parent1 {
+    min-width: 100%;
+  }
+  .frame-bhavesh-ahirrao1 {
+    padding-left: 49px;
+    padding-right: var(--padding-8xl);
+    box-sizing: border-box;
+  }
+  .rectangle-parent2 {
+    padding-right: var(--padding-2xl);
+    box-sizing: border-box;
+  }
+  .a-i-group-frame {
+    min-width: 100%;
+  }
+  .image-vector-frame {
+    gap: 0 272px;
+    padding-top: 236px;
+    padding-bottom: 182px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 825px) {
+  .ellipse-rushabh-dorgeai {
+    gap: 38px 0;
+  }
+  .bhavesh-ahirrao-a {
+    font-size: var(--font-size-5xl);
+  }
+  .frame-group-cultural-xchange {
+    min-width: 100%;
+  }
+  .frame-bhavesh-ahirrao {
+    padding-top: 248px;
+    box-sizing: border-box;
+  }
+  .ellipse-parent {
+    min-width: 100%;
+  }
+  .hyeonggeun-oh-a {
+    font-size: var(--font-size-5xl);
+  }
+  .frame-bhavesh-ahirrao1 {
+    padding-top: 209px;
+    box-sizing: border-box;
+  }
+  .rushabh-dorage-a-container {
+    font-size: var(--font-size-5xl);
+  }
+  .image-vector-frame {
+    gap: 0 272px;
+    padding-top: 153px;
+    padding-bottom: 118px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .mask-group-frame-components {
+    min-width: 100%;
+  }
+  .priyant-a-passionate-container {
+    font-size: 16px;
+  }
+  .priyant-banerjee-president-container {
+    font-size: var(--font-size-lgi);
+    line-height: 29px;
+  }
+  .frame-project-inspiration {
+    gap: 125px 0;
+    padding-top: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .bhavesh-ahirrao-a {
+    font-size: var(--font-size-lg);
+  }
+  .bhavesh-ahirrao-director-container {
+    font-size: var(--font-size-lgi);
+    line-height: 29px;
+  }
+  .frame-group-cultural-xchange {
+    gap: 38px 0;
+  }
+  .frame-bhavesh-ahirrao {
+    padding-top: 161px;
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .hyeonggeun-oh-main-container {
+    font-size: var(--font-size-lgi);
+    line-height: 29px;
+  }
+  .ellipse-parent {
+    gap: 38px 0;
+  }
+  .hyeonggeun-oh-a {
+    font-size: var(--font-size-lg);
+  }
+  .frame-bhavesh-ahirrao1 {
+    padding-left: var(--padding-xl);
+    padding-top: 136px;
+    box-sizing: border-box;
+  }
+  .rushabh-dorage-a-container {
+    font-size: var(--font-size-lg);
+  }
+  .rushabh-dorage-ai-container {
+    font-size: var(--font-size-lgi);
+    line-height: 29px;
+  }
+  .ellipse-rushabh-dorge-parent {
+    gap: 38px 0;
+    min-width: 100%;
+  }
+  .image-vector-frame {
+    gap: 0 272px;
+  }
+  .rcop-2024-all-container {
+    font-size: var(--font-size-lgi);
+  }
+}

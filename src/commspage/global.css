@@ -1,0 +1,34 @@
+
+
+:root {
+  /* fonts */
+  --font-lucida-sans: "Lucida Sans";
+
+  /* font sizes */
+  --font-size-26xl: 45px;
+  --font-size-17xl: 36px;
+  --font-size-8xl: 27px;
+  --font-size-16xl: 35px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-deepskyblue: #18a8f9;
+
+  /* Gaps */
+  --gap-29xl: 48px;
+  --gap-39xl: 58px;
+
+  /* Paddings */
+  --padding-46xl: 65px;
+  --padding-8xl: 27px;
+  --padding-81xl: 100px;
+  --padding-xl: 20px;
+  --padding-82xl: 101px;
+  --padding-2xl: 21px;
+  --padding-47xl: 66px;
+  --padding-76xl: 95px;
+  --padding-43xl: 62px;
+
+  /* Border radiuses */
+  --br-31xl: 50px;
+}

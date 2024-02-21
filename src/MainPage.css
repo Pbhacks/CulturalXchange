@@ -2100,6 +2100,8 @@ textarea.w-input, textarea.w-select {
 .mainpage-body {
   margin-bottom: 0;
   padding: 80px 60px;
+  background: rgb(0,0,0);
+background: linear-gradient(41deg, rgba(0,0,0,1) 0%, rgba(176,32,32,1) 50%, rgba(37,0,138,1) 82%);
 }
 
 .mainpage-nav {
@@ -2109,20 +2111,24 @@ textarea.w-input, textarea.w-select {
   padding-left: 40px;
   padding-right: 40px;
   display: flex;
+  
 }
 
 .mainpage-hero {
   min-height: 100vh;
-  background-image: url("https://assets-global.website-files.com/65bdd5d09760d72632451374/65c117075efa63305509b012_WhatsApp%20Image%202024-01-14%20at%2022.29%201%20(1).png");
-  background-position: 0 0;
-  background-size: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-left: 60px;
   padding-right: 60px;
   display: flex;
+  position: relative;
+  background-image: url('4.jpeg');
+  background-size: cover;
+  background-position: center;
 }
+
+
 
 .mainPage-div-block {
   grid-column-gap: 40px;
