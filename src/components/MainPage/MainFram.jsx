@@ -3,6 +3,7 @@ import React from "react";
 import MyComponent from "../ui/PublishedComponent";
 import "./mainFramStyle.css";
 import { Link } from 'react-router-dom';
+import logo from './logo.png';
 
 function MainFram() {
   return (
@@ -10,7 +11,7 @@ function MainFram() {
       <div className="mainframe-divblock2">
         <div className="mainfram-divblock3">
           <img
-            src="https://assets-global.website-files.com/65bdd5d09760d72632451374/65c362e41783a6bf53200d31_WhatsApp%20Image%202024-02-07%20at%2016.21.09.jpeg"
+            src={logo}
             loading="lazy"
             width="108"
             height="108"
@@ -42,6 +43,12 @@ function MainFram() {
             </Link>
           </div>
           <div className="mainframdivblock3">
+            <i style={{color:"gray"}} className="bi bi-alexa"></i>
+            <Link to= ""className="link-block w-inline-block">
+                        <div className="text-block">MyAI</div>
+                    </Link></div>
+           
+           <div className="mainframdivblock3">
             <i
               style={{ color: "gray" }}
               className="bi bi-question-circle-fill"
@@ -53,7 +60,7 @@ function MainFram() {
           <div className="mainframdivblock3 btm">
             <i style={{ color: "gray" }} className="bi bi-gear-fill"></i>
             <a href="#" className="link-block w-inline-block">
-              <div className="text-block">Setting</div>
+              <div className="text-block">Settings</div>
             </a>
           </div>
         </div>
