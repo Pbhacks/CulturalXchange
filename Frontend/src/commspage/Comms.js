@@ -1,6 +1,11 @@
 import React from 'react';
 import './global.css';
 import './index.css';
+import southkimg from "./southk.png"; 
+import chinaimg from "./china.png"; 
+import addimg from "./group-67.svg"; 
+import japanimg from "./japan.png"; 
+import  indiaimg from "./india.png"; 
 import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
 
 const CommunitiesPage = () => {
@@ -33,14 +38,14 @@ const CommunitiesPage = () => {
         <section className="f-r-a-m-e-group">
           <div className="f-r-a-m-e-group1">
             <div className="frame-parent">
-              <img className="frame-child" loading="eager" alt="" src="imgs/southk.png" />
+              <img className="frame-child" loading="eager" alt="southkimg" src={southkimg} />
 
               <div className="south-korea">
                 <div className="south-korea1">South Korea</div>
               </div>
             </div>
             <div className="frame-group">
-              <img className="frame-item" loading="eager" alt="" src="imgs\china.png" />
+              <img className="frame-item" loading="eager" alt="chinaimg" src={chinaimg} />
 
               <div className="china-parent">
                 <div className="china">
@@ -53,12 +58,12 @@ const CommunitiesPage = () => {
           <button className="f-r-a-m-e4">
             <div className="frame-group-east-asia">
               <div className="circle-with-info"></div>
-              <img className="frame-group-east-asia-child" alt="" src="imgs\group-67.svg" />
+              <img className="frame-group-east-asia-child" alt="addimg" src={addimg}/>
             </div>
           </button>
           <div className="f-r-a-m-e5">
             <div className="country-instance">
-              <img className="country-instance-child" loading="eager" alt="" src="imgs\japan.png" />
+              <img className="country-instance-child" loading="eager" alt="japanimg" src={japanimg} />
 
               <div className="japan">
                 <div className="japan1">Japan</div>
@@ -66,7 +71,7 @@ const CommunitiesPage = () => {
             </div>
             <div className="india-instance">
               <div className="frame-container">
-                <img className="group-icon" loading="eager" alt="" src="imgs\india.png" />
+                <img className="group-icon" loading="eager" alt="indiaimg" src={indiaimg}/>
 
                 <div className="india">
                   <div className="india1">India</div>
