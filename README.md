@@ -47,6 +47,61 @@ With an eye toward future growth and expansion, CulturalXchange is engineered fo
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/networkx/networkx-original.svg" title="NetworkX" alt="NetworkX" width="60" height="60">&nbsp;
 
+## Frontend
+
+### Installation
+
+To run the frontend, follow these steps:
+
+1. Navigate to the `Frontend` directory:
+
+    ```bash
+    cd Frontend
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+### Usage
+
+Run the frontend:
+
+```bash
+npm start
+```
+
+## Backend
+
+### Installation
+
+To run the frontend, follow these steps:
+
+1. Navigate to the `Backend` directory:
+
+    ```bash
+    cd Backend
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    node install
+    ```
+3. Create a `.env` file:
+   ```bash
+     API_KEY="your_key"
+
+### Usage
+
+Run the backend:
+
+```bash
+npm start
+```
+
 ## Upcoming
 
 In the relentless pursuit of accessibility, CulturalXchange is poised to unveil dedicated mobile applications for both Android and iOS platforms. These intuitive apps will extend the platform's reach, empowering users to embark on a cultural odyssey at their fingertips, regardless of time or place. <br>
