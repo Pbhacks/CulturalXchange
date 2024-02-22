@@ -58,6 +58,382 @@
   max-width: 100%;
   z-index: 1;
 }
+
+
+
+
+
+
+.about-us-3-child,
+.about-us-3-inner,
+.about-us-3-item,
+.slice-div {
+  align-self: stretch;
+  position: relative;
+  height: 1099px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.about-us-3-inner,
+.about-us-3-item,
+.slice-div {
+  height: 1107px;
+  z-index: 1;
+}
+.about-us-3-inner,
+.slice-div {
+  z-index: 2;
+}
+.slice-div {
+  z-index: 3;
+}
+.ellipse-icon {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.president1,
+.priyant-banerjee1 {
+  margin: 0;
+}
+.priyant-banerjee-president-container3 {
+  width: 100%;
+}
+.priyant-banerjee-president-container2 {
+  width: 354px;
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  height: 85px;
+  flex-shrink: 0;
+}
+.ellipse-group {
+  margin: 0 !important;
+  position: absolute;
+  top: 421px;
+  left: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 38px 0;
+  z-index: 4;
+}
+.group-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+.hyeonggeun-oh1,
+.main-developer1 {
+  margin: 0;
+}
+.hyeonggeun-oh-main-container2 {
+  width: 100%;
+}
+.hyeonggeun-oh-main-container1 {
+  position: absolute;
+  top: 379px;
+  left: 0;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  width: 354px;
+  height: 85px;
+}
+.ellipse-container {
+  width: 354px;
+  position: absolute;
+  margin: 0 !important;
+  top: 2567px;
+  left: 99px;
+  height: 464px;
+  flex-shrink: 0;
+  z-index: 5;
+}
+.group-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+.ai-lead1,
+.rushabh-dorage1 {
+  margin: 0;
+}
+.rushabh-dorage-ai-container2 {
+  width: 100%;
+}
+.rushabh-dorage-ai-container1 {
+  position: absolute;
+  top: 379px;
+  left: 0;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  width: 354px;
+  height: 85px;
+}
+.ellipse-parent1 {
+  width: 354px;
+  position: absolute;
+  margin: 0 !important;
+  top: 3720px;
+  left: 1275px;
+  height: 464px;
+  flex-shrink: 0;
+  z-index: 6;
+}
+.group-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+.bhavesh-ahirrao1,
+.director-of-designs1 {
+  margin: 0;
+}
+.bhavesh-ahirrao-director-container2 {
+  width: 100%;
+}
+.bhavesh-ahirrao-director-container1 {
+  position: absolute;
+  top: 379px;
+  left: 0;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 85px;
+}
+.ellipse-parent2 {
+  width: 350px;
+  height: 464px;
+  position: absolute;
+  margin: 0 !important;
+  top: 1491px;
+  left: 1279px;
+  flex-shrink: 0;
+  z-index: 7;
+}
+.blank-line3,
+.his-dedication-to1,
+.priyant-a-passionate1,
+.worlds-to-break1 {
+  margin: 0;
+  font-weight: 500;
+}
+.serves-as-the1 {
+  font-weight: 500;
+}
+.span1 {
+  font-size: var(--font-size-xl);
+  font-family: var(--font-manrope);
+}
+.serves-as-the-driving-force-be1 {
+  margin: 0;
+}
+.priyant-a-passionate-container1 {
+  position: relative;
+  text-transform: capitalize;
+}
+.group-child1,
+.priyant-a-passionate-cultural-wrapper {
+  position: absolute;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+}
+.priyant-a-passionate-cultural-wrapper {
+  margin: 0 !important;
+  top: 438px;
+  left: 718px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--padding-41xl) var(--padding-24xl);
+  z-index: 8;
+  font-size: var(
+    --www-tandem-net-1440x8101587524414062-default-roboto-bold-30-size
+  );
+}
+.group-child1 {
+  top: 0;
+  left: 0;
+  width: 972px;
+  height: 347px;
+}
+.bhavesh-ahirrao-a1 {
+  position: absolute;
+  top: 101px;
+  left: 55px;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 861px;
+  height: 165px;
+}
+.group-child2,
+.rectangle-parent3 {
+  position: absolute;
+  width: 972px;
+  height: 347px;
+}
+.rectangle-parent3 {
+  margin: 0 !important;
+  top: 1491px;
+  left: 58px;
+  flex-shrink: 0;
+  z-index: 9;
+  font-size: var(
+    --www-tandem-net-1440x8101587524414062-default-roboto-bold-30-size
+  );
+}
+.group-child2 {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+}
+.hyeonggeun-oh-a1 {
+  position: absolute;
+  top: 40px;
+  left: 16px;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 939px;
+  height: 261px;
+}
+.group-child3,
+.rectangle-parent4 {
+  position: absolute;
+  width: 972px;
+  height: 347px;
+}
+.rectangle-parent4 {
+  margin: 0 !important;
+  top: 2567px;
+  left: 702px;
+  flex-shrink: 0;
+  z-index: 10;
+  font-size: var(
+    --www-tandem-net-1440x8101587524414062-default-roboto-bold-30-size
+  );
+}
+.group-child3 {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightgray);
+}
+.blank-line4,
+.rushabh-dorage-a1 {
+  margin: 0;
+}
+.rushabh-dorage-a-container2 {
+  width: 100%;
+}
+.rushabh-dorage-a-container1 {
+  position: absolute;
+  top: 31px;
+  left: 41px;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  width: 889px;
+  height: 264px;
+}
+.rectangle-parent5 {
+  width: 972px;
+  position: absolute;
+  margin: 0 !important;
+  top: 3760px;
+  left: 35px;
+  height: 347px;
+  flex-shrink: 0;
+  z-index: 11;
+  font-size: var(
+    --www-tandem-net-1440x8101587524414062-default-roboto-bold-30-size
+  );
+}
+.about-us-3 {
+  width: 100%;
+  height: 4434px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-white);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-manrope);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .rectangle-group {
   align-self: stretch;
   border-radius: var(--br-31xl);
@@ -881,4 +1257,8 @@
   .rcop-2024-all-container {
     font-size: var(--font-size-lgi);
   }
+ 
+
+
+  
 }
