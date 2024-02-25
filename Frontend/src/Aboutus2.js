@@ -1,14 +1,28 @@
 import React from 'react';
 import './global.css';
 import './Aboutus2.css';
-import logo from './imagescontext';
-import { CollectionReference } from '@firebase/firestore';
+import img1 from './logos/priyant.jpeg';
+import img2 from './logos/Hyung.jpeg';
+import img3 from './logos/rushab.jpeg';
+import img4 from './logos/bhavesh.png';
+import twitter from './logos/twitter.png'
+import intel from './logos/intel.png'
+import amd from './logos/amd.png'
+import css from './logos/css.png'
+import reactjs from './logos/reactjs.png'
+import ts from './logos/ts.svg'
+import facebook from './logos/facebook.svg'
+import figma from './logos/figma.svg'
+import google from './logos/google.svg'
+import vscode from './logos/vscode.svg'
+import vectorRectangle from './logos/vector-rectangle.svg'
 
-const AboutUs2 = () => {
+function AboutUs2() {
   return (
 
     
-    <div className="about-us-2">
+   <div>
+     <div className="about-us-2">
       <section className="frame-project-inspiration">
         <div className="frame-cultural-xchange-text">
           <header className="group-design-team-members">
@@ -35,17 +49,11 @@ const AboutUs2 = () => {
            
           </header>
         </div>
-        </section>
-            
-
-        
+      </section>
+                    
         <div class="about-us-3"> 
-      <div class="about-us-3-child"></div>
-      <div class="about-us-3-item"></div>
-      <div class="about-us-3-inner"></div>
-      <div class="slice-div"></div>
       <div class="ellipse-group">
-        <img class="ellipse-icon" alt="" src={logo['priyant']} />
+        <img class="ellipse-icon" alt="" src={img1} />
 
         <b class="priyant-banerjee-president-container2">
           <span class="priyant-banerjee-president-container3">
@@ -55,7 +63,7 @@ const AboutUs2 = () => {
         </b>
       </div>
       <div class="ellipse-container">
-        <img class="group-child" alt="" src={logo['Hyung']} />
+        <img class="group-child" alt="" src={img2} />
 
         <b class="hyeonggeun-oh-main-container1">
           <span class="hyeonggeun-oh-main-container2">
@@ -65,7 +73,7 @@ const AboutUs2 = () => {
         </b>
       </div>
       <div class="ellipse-parent1">
-        <img class="group-item" alt="" src={logo['rushab']} />
+        <img class="group-item" alt="" src={img3} />
 
         <b class="rushabh-dorage-ai-container1">
           <span class="rushabh-dorage-ai-container2">
@@ -75,7 +83,7 @@ const AboutUs2 = () => {
         </b>
       </div>
       <div class="ellipse-parent2">
-        <img class="group-inner" alt="" src={logo['bhavesh']}/>
+        <img class="group-inner" alt="" src={img4}/>
 
         <b class="bhavesh-ahirrao-director-container1">
           <span class="bhavesh-ahirrao-director-container2">
@@ -139,94 +147,77 @@ const AboutUs2 = () => {
           </span>
         </div>
       </div>
-    </div>
+        </div>
        
-
-
-
-
-
-
-
       <section className="about-us-2-inner">
         <div className="a-m-d-jpeg-intel-p-n-g-wrapper">
           <div className="a-m-d-jpeg-intel-p-n-g">
             <div className="i-n-t-e-l-slice">
-              <img className="i-n-t-e-l-slice-child" alt="" />
 
               <img
                 className="x-jpeg"
-                loading="eager"
                 alt="twitter png"
-                src={logo['twitter']}
+                src={twitter}
               />
 
               <img
                 className="g12-icon"
-                loading="eager"
                 alt="facebook"
-                src={logo['facebook']}
+                src={facebook}
               />
 
               <img
                 className="mask-group-icon"
-                loading="eager"
                 alt="vscode"
-                src={logo['vscode']}
+                src={vscode}
               />
 
               <img
                 className="vector-rectangle-icon"
                 alt="error"
-                src={logo['vector-rectangle']}
+                src={vectorRectangle}
               />
 
               <img
                 className="vector-rectangle-icon1"
                 alt="ts"
-                src={logo['ts']}
+                src={ts}
               />
 
               <img
                 className="image-2-icon"
-                loading="eager"
                 alt="reactjs"
-                src={logo['reactjs']}
+                src={reactjs}
               />
 
               <img
                 className="image-3-icon"
-                loading="eager"
                 alt="css"
-                src={logo['css']}
+                src={css}
               />
             </div>
             <img
               className="amd-jpeg"
-              loading="eager"
               alt="amd"
-              src={logo['amd']}
+              src={amd}
             />
 
             <img
               className="a-m-d-jpeg-intel-p-n-g-child"
-              loading="eager"
               alt="google"
-              src={logo['google']}
+              src={google}
             />
 
             <img
               className="intel-png"
-              loading="eager"
               alt="intel"
-              src={logo['intel']}
+              src={intel}
             />
 
             <img
               className="figma-svg-icon"
-              loading="eager"
               alt="figma"
-              src={logo['figma']}
+              src={figma}
             />
           </div>
         </div>
@@ -240,8 +231,8 @@ const AboutUs2 = () => {
         </div>
       </div>
     </div>
-    
+   </div>
   );
-};
+}
 
 export default AboutUs2;
