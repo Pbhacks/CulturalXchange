@@ -84,7 +84,7 @@
 .group-design-team-members {
   flex: 1;
   flex-direction: column;
-  gap: 28px 0;
+  gap: 2px 0;
   text-align: center;
   font-size: var(--font-size-26xl);
   font-family: var(--font-lucida-sans);
