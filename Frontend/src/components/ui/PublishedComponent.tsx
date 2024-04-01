@@ -6,6 +6,7 @@ import Chat from "./Chat";
 import { User } from "../../types/type";
 import { redirect, useNavigate } from "react-router-dom";
 import InputBar from "./InputBar";
+import "./PublishedComponentStyle.css"
 
 import UserList from "./UserList";
 
@@ -43,6 +44,251 @@ export default function MyComponent() {
   }, [user]);
 
   return (
+    <div
+    id="w-node-_8f3bce48-c76a-b674-e0a0-df16721a330a-6dcbac69"
+    className="w-layout-layout quick-stack wf-layout-layout"
+  >
+{/*     <div
+      id="w-node-c00677da-7626-4016-a865-67375010e02b-6dcbac69"
+      className="w-layout-cell cell-2"
+    >
+      <div className="w-layout-blockcontainer container-4 w-container"></div>
+    </div> */}
+    <div
+      id="w-node-_86d87ce1-b7ac-0206-67c6-e8eca97c4219-6dcbac69"
+      className="w-layout-cell messcell"
+    >
+      <div className="w-layout-blockcontainer container-2 w-container">
+        <div className="mess">
+          <h3 className="heading-3">
+             Chats
+            <br />‍
+          </h3>
+        </div>
+        <section className="chats">
+          <div className="search">
+            <div className="text-block-2">Search Direct Messages... .</div>
+            <img
+              src="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65cb5e24810fbcff76141435_TB-8-5a3acc9425da0.png"
+              loading="lazy"
+              width={45}
+              height={45}
+              alt=""
+              className="image-8"
+            />
+            <div className="div-block-7" />
+          </div>
+        </section>
+        <div className="div-block-3">
+          <div className="div-block-4">
+            <img
+              src="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png"
+              loading="lazy"
+              sizes="(max-width: 479px) 28.203125px, 11vw"
+              srcSet="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-500.png 500w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-800.png 800w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png 1024w"
+              alt=""
+              className="image-5"
+            />
+          </div>
+          <h4
+            id="w-node-c806109b-981c-5b79-dd31-63b631075a98-6dcbac69"
+            className="heading-2"
+          >
+            Someone
+          </h4>
+          <div
+            id="w-node-_9e743699-f0e7-2754-2b9d-3f552a242656-6dcbac69"
+            className="text-block-3"
+          >
+            Lorem ...{" "}
+          </div>
+          <div className="text-block-4">12:30</div>
+        </div>
+        <div className="div-block-3">
+          <div className="div-block-4">
+            <img
+              src="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png"
+              loading="lazy"
+              sizes="(max-width: 479px) 28.203125px, 11vw"
+              srcSet="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-500.png 500w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-800.png 800w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png 1024w"
+              alt=""
+              className="image-5"
+            />
+          </div>
+          <h4
+            id="w-node-_1e98d393-3bfc-aae7-cf14-653ab99d5815-6dcbac69"
+            className="heading-2"
+          >
+            Someone
+          </h4>
+          <div
+            id="w-node-_1e98d393-3bfc-aae7-cf14-653ab99d5817-6dcbac69"
+            className="text-block-3"
+          >
+            Lorem ...{" "}
+          </div>
+          <div className="text-block-4">12:30</div>
+        </div>
+        <div className="div-block-3">
+          <div className="div-block-4">
+            <img
+              src="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png"
+              loading="lazy"
+              sizes="(max-width: 479px) 28.203125px, 11vw"
+              srcSet="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-500.png 500w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-800.png 800w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png 1024w"
+              alt=""
+              className="image-5"
+            />
+          </div>
+          <h4
+            id="w-node-_2feba637-45c1-c722-62be-21098e659240-6dcbac69"
+            className="heading-2"
+          >
+            Someone
+          </h4>
+          <div
+            id="w-node-_2feba637-45c1-c722-62be-21098e659242-6dcbac69"
+            className="text-block-3"
+          >
+            Lorem ...{" "}
+          </div>
+          <div className="text-block-4">12:30</div>
+        </div>
+        <div className="div-block-3">
+          <div className="div-block-4">
+            <img
+              src="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png"
+              loading="lazy"
+              sizes="(max-width: 479px) 28.203125px, 11vw"
+              srcSet="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-500.png 500w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-800.png 800w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png 1024w"
+              alt=""
+              className="image-5"
+            />
+          </div>
+          <h4
+            id="w-node-b3bd06f1-119e-37b9-ddea-23d2205d168f-6dcbac69"
+            className="heading-2"
+          >
+            Someone
+          </h4>
+          <div
+            id="w-node-b3bd06f1-119e-37b9-ddea-23d2205d1691-6dcbac69"
+            className="text-block-3"
+          >
+            Lorem ...{" "}
+          </div>
+          <div className="text-block-4">12:30</div>
+        </div>
+        <div className="div-block-o">
+          <div
+            id="w-node-_0f6c8e83-d115-508c-7d86-a8c87d97caa2-6dcbac69"
+            className="div-block-9"
+          >
+            <svg
+              width={34}
+              height={34}
+              viewBox="0 0 40 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 16.75H39"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M20 32.5V1"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="w-node-_31a387a4-af5f-ee69-3c53-7dfc989377e1-6dcbac69"
+      className="w-layout-cell cell"
+    >
+      <div className="w-layout-blockcontainer container-3 w-container">
+        <div className="dm">
+          <div
+            id="w-node-e9ce4152-df27-6c73-7f08-c6cab6db622c-6dcbac69"
+            className="div-block-9"
+          >
+            <img
+              src="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65cb7b89d912eb7e27f5af8b_icon_3.png"
+              loading="lazy"
+              width={10}
+              id="w-node-_6171a84a-fa55-5186-d243-196b0e084e40-6dcbac69"
+              alt=""
+              className="image-9"
+            />
+          </div>
+          <div
+            id="w-node-dde423f0-5e09-e76e-d76c-3c15e1d5ca61-6dcbac69"
+            className="text-block"
+          >
+            Start a new message...
+          </div>
+          <div
+            id="w-node-_92256b0e-d6c4-1d78-8282-15a244d850c8-6dcbac69"
+            className="div-block-8"
+          >
+            <div
+              id="w-node-_9dcc8c23-c1bd-6622-b4d2-a38c536824af-6dcbac69"
+              className="div-block-10"
+            >
+              <a
+                id="w-node-_9725e863-86f3-9ac7-f305-406d05be9de6-6dcbac69"
+                href="#"
+                className="button w-button"
+              >
+                send
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="usern">
+          <h3
+            id="w-node-_3b554db8-caea-8895-823b-a4e0677fc28c-6dcbac69"
+            className="heading-4"
+          >
+            SomeOne
+          </h3>
+          <div className="div-block-5">
+            <img
+              src="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png"
+              loading="lazy"
+              sizes="50px"
+              srcSet="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-500.png 500w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac-p-800.png 800w, https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca67d9e9646b89b321f4e2_c24aaf49f7dc286dd0f7020a5bb820ac.png 1024w"
+              alt=""
+              className="image-6"
+            />
+          </div>
+          <div
+            id="w-node-_2ec8c127-8e29-e62f-1f43-2c2ebe569e00-6dcbac69"
+            className="div-block-6"
+          >
+            <img
+              src="https://assets-global.website-files.com/65c32f325ae02f516dcbac61/65ca6f3c74443093f327297f_R.png"
+              loading="lazy"
+              alt=""
+              className="image-7"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  );
+}
+
+ /*  return (
     <Div>
       <Div2>
         <Column>
@@ -79,8 +325,8 @@ export default function MyComponent() {
               />
             </Div31>
             <Div34>
-              {/* rendering chat*/}
-              {currentRoomId && <Chat roomId={currentRoomId} />}
+              /*rendering chat*/
+             /*  {currentRoomId && <Chat roomId={currentRoomId} />}
               <Div35>
                 <Img26
                   loading="lazy"
@@ -108,9 +354,9 @@ export default function MyComponent() {
       </Div2>
     </Div>
   );
-}
+} */
 
-const Div = styled.div`
+/* const Div = styled.div`
   height: 100vh;
   overflow: scroll;
   display: flex;
@@ -327,3 +573,4 @@ const Img31 = styled.img`
   overflow: hidden;
   max-width: 100%;
 `;
+ */
