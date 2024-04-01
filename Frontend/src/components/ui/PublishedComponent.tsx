@@ -48,12 +48,6 @@ export default function MyComponent() {
     id="w-node-_8f3bce48-c76a-b674-e0a0-df16721a330a-6dcbac69"
     className="w-layout-layout quick-stack wf-layout-layout"
   >
-{/*     <div
-      id="w-node-c00677da-7626-4016-a865-67375010e02b-6dcbac69"
-      className="w-layout-cell cell-2"
-    >
-      <div className="w-layout-blockcontainer container-4 w-container"></div>
-    </div> */}
     <div
       id="w-node-_86d87ce1-b7ac-0206-67c6-e8eca97c4219-6dcbac69"
       className="w-layout-cell messcell"
