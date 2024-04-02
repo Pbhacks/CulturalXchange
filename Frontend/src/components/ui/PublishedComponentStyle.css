@@ -2150,12 +2150,12 @@ html {
     position: relative;
   }
   
-  .container {
+  /* .container {
     width: 100%;
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
   
   .testimonial-card-three {
     text-align: center;
