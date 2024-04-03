@@ -48,7 +48,8 @@
 .button {
   color: #18A8F9; 
   border: none;
-  
+  width: auto;
+  height: auto;
   background-color: transparent;
   text-align: center;
   text-decoration: none;
